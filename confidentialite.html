@@ -43,6 +43,7 @@
     <symbol id="i-croix" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></symbol>
     <symbol id="i-plus" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" d="M12 5v14M5 12h14"/></symbol>
     <symbol id="i-gauche" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M15 5l-7 7 7 7"/></symbol>
+    <symbol id="i-bas" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></symbol>
     <symbol id="i-droite" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></symbol>
     <symbol id="i-menu" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M4 7h16M4 12h16M4 17h10"/></symbol>
     <symbol id="i-repere" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" d="M12 21.2s-7-6.3-7-11.7a7 7 0 0 1 14 0c0 5.4-7 11.7-7 11.7z"/><circle cx="12" cy="9.5" r="2.5" fill="none" stroke="currentColor" stroke-width="1.7"/></symbol>
@@ -95,7 +96,21 @@
     </a>
     <nav class="nav" aria-label="Navigation principale">
       <ul class="nav__liste">
-        <li><a class="nav__lien"  href="hebergements.html">Hébergements</a></li>
+        <li class="nav__item nav__item--sous">
+          <a class="nav__lien"  href="hebergements.html">Hébergements</a>
+          <button type="button" class="nav__ouvrir" aria-expanded="false" aria-controls="sous-menu" aria-label="Afficher la liste des hébergements"><svg aria-hidden="true"><use href="#i-bas"/></svg></button>
+          <div class="sous-menu" id="sous-menu">
+            <ul class="sous-menu__liste">
+              <li><a class="sous-menu__lien" href="hebergements/gites-en-pierre.html"><img src="assets/img/gites-cour-800.jpg" width="64" height="64" alt="" loading="lazy"><span><strong>Le Cerisier et le Marronnier</strong><small>Gîtes en pierre · environ 30 personnes</small></span></a></li>
+              <li><a class="sous-menu__lien" href="hebergements/le-douglas.html"><img src="assets/img/hero-chalet-800.jpg" width="64" height="64" alt="" loading="lazy"><span><strong>Le Douglas</strong><small>Chalet en bois · jusqu'à 30 personnes</small></span></a></li>
+              <li><a class="sous-menu__lien" href="hebergements/le-truffier.html"><img src="assets/img/truffier-800.jpg" width="64" height="64" alt="" loading="lazy"><span><strong>Le Truffier</strong><small>Chalet en bois · jusqu'à 30 personnes</small></span></a></li>
+              <li><a class="sous-menu__lien" href="hebergements/tilleul-et-acacia.html"><img src="assets/img/tilleul-800.jpg" width="64" height="64" alt="" loading="lazy"><span><strong>Tilleul et Acacia</strong><small>Deux logements · jusqu'à 14 personnes</small></span></a></li>
+              <li><a class="sous-menu__lien" href="hebergements/roulottes-et-cabanes.html"><img src="assets/img/roulotte-800.jpg" width="64" height="64" alt="" loading="lazy"><span><strong>Roulottes, cabanes et atelier</strong><small>Insolites · jusqu'à 14 lits</small></span></a></li>
+              <li><a class="sous-menu__lien" href="hebergements/bivouacs.html"><img src="assets/img/bivouac-pilotis-800.jpg" width="64" height="64" alt="" loading="lazy"><span><strong>Les bivouacs perchés</strong><small>Nuit à la belle étoile · 12 à 36 personnes</small></span></a></li>
+            </ul>
+            <a class="sous-menu__tout" href="hebergements.html">Tous les hébergements<svg aria-hidden="true"><use href="#i-fleche"/></svg></a>
+          </div>
+        </li>
         <li><a class="nav__lien"  href="le-domaine.html">Le domaine</a></li>
         <li><a class="nav__lien"  href="evenements.html">Événements</a></li>
         <li><a class="nav__lien"  href="contact.html">Contact</a></li>
@@ -118,7 +133,16 @@
   <nav class="contenant" aria-label="Menu">
     <ul class="nav-mobile__liste">
       <li><a class="nav-mobile__lien"  href="index.html">Accueil</a></li>
-      <li><a class="nav-mobile__lien"  href="hebergements.html">Hébergements</a></li>
+      <li><a class="nav-mobile__lien nav-mobile__lien--parent"  href="hebergements.html">Hébergements</a>
+        <ul class="nav-mobile__sous">
+          <li><a href="hebergements/gites-en-pierre.html">Le Cerisier et le Marronnier</a></li>
+          <li><a href="hebergements/le-douglas.html">Le Douglas</a></li>
+          <li><a href="hebergements/le-truffier.html">Le Truffier</a></li>
+          <li><a href="hebergements/tilleul-et-acacia.html">Tilleul et Acacia</a></li>
+          <li><a href="hebergements/roulottes-et-cabanes.html">Roulottes, cabanes et atelier</a></li>
+          <li><a href="hebergements/bivouacs.html">Les bivouacs perchés</a></li>
+        </ul>
+      </li>
       <li><a class="nav-mobile__lien"  href="le-domaine.html">Le domaine</a></li>
       <li><a class="nav-mobile__lien"  href="evenements.html">Événements</a></li>
       <li><a class="nav-mobile__lien"  href="contact.html">Contact</a></li>
@@ -165,7 +189,6 @@
       <h2>Nous joindre</h2>
       <ul>
         <li><a class="pied__tel" href="tel:+33680141850">06 80 14 18 50</a></li>
-        <li><a href="tel:+33677542871">06 77 54 28 71</a></li>
         <li><a href="mailto:contact@domainedechatillon.fr">contact@domainedechatillon.fr</a></li>
         <li>Impasse de la Sablière<br>26750 Châtillon-Saint-Jean</li>
       </ul>

@@ -40,7 +40,7 @@ window.DC_AGENDA = {
       lieu: "Au domaine, ouvert à tous",
       texte: "Chasse aux trésors dans la forêt aux lutins (départ à 13 h 30), ateliers créatifs de 15 h à 17 h, gellyball, lettres au Père Noël et lectures de contes, buvette avec vin chaud, crêpes et chocolat chaud. Visite du Père Noël à 17 h 15.",
       tarif: "Ateliers : 5 € par enfant, 7 € par adulte. Gellyball : 10 €",
-      reservation: "Réservation obligatoire par SMS au 06 77 54 28 71. Paiement sur place, en espèces ou par chèque.",
+      reservation: "Réservation obligatoire par SMS au 06 80 14 18 50. Paiement sur place, en espèces ou par chèque.",
       photo: "cerisier-neige",
       affiche: "affiche-noel",
       lien: "",

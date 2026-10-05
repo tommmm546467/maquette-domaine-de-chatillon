@@ -6,7 +6,8 @@
    4. Film YouTube chargé au clic (youtube-nocookie), dans une fenêtre ou dans son cadre
    5. Formulaires de demande : vérification, puis e-mail préparé
    6. Apparitions au défilement, barre d'appel mobile, sous-navigation active
-   7. Carrousel des hébergements de l'accueil (flèches, barre de progression)
+   7. Carrousels d'hébergements (flèches, barre de progression)
+   8. Sous-menu Hébergements de l'en-tête (clic sur le chevron, Échap)
    Aucun framework, aucune dépendance.
    ============================================================ */
 (function (window, document) {
@@ -265,7 +266,7 @@
     var boutons = $$('[data-carrousel][aria-controls="' + piste.id + '"]');
     var barre = $('.carrousel__progression span', piste.parentNode);
     function pas() {
-      var carte = piste.firstElementChild;
+      var carte = [].filter.call(piste.children, function (c) { return c.offsetWidth > 0; })[0];
       var ecart = parseFloat(getComputedStyle(piste).columnGap) || 0;
       return carte ? carte.getBoundingClientRect().width + ecart : piste.clientWidth;
     }
@@ -290,5 +291,15 @@
       if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') { e.preventDefault(); piste.scrollBy({ left: (e.key === 'ArrowLeft' ? -1 : 1) * pas() }); }
     });
     maj();
+  });
+
+  /* ---------- 8. Sous-menu Hébergements ---------- */
+  // Il s'ouvre au survol et au clavier (CSS) ; le chevron l'ouvre aussi au clic, pour les écrans tactiles.
+  $$('.nav__item--sous').forEach(function (item) {
+    var b = $('.nav__ouvrir', item);
+    function basculer(o) { item.classList.toggle('est-ouvert', o); b.setAttribute('aria-expanded', o ? 'true' : 'false'); }
+    b.addEventListener('click', function (e) { e.stopPropagation(); basculer(!item.classList.contains('est-ouvert')); });
+    document.addEventListener('click', function (e) { if (!item.contains(e.target)) basculer(false); });
+    item.addEventListener('keydown', function (e) { if (e.key === 'Escape') { basculer(false); b.focus(); } });
   });
 })(window, document);

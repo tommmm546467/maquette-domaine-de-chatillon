@@ -214,6 +214,30 @@ p{ text-wrap: pretty; }
   background: var(--c-vert); transform: scale(0); transition: transform var(--t-doux);
 }
 .nav__lien:hover::after, .nav__lien[aria-current="page"]::after{ transform: scale(1); }
+/* Sous-menu Hébergements (V4) : au survol, au clavier, ou au clic sur le chevron */
+.nav__item{ position: relative; }
+.nav__item--sous{ display: flex; align-items: center; gap: .1rem; }
+.nav__ouvrir{ width: 28px; height: 28px; display: grid; place-items: center; border-radius: 50%; color: inherit; transition: transform var(--t-doux), background-color var(--t-doux); }
+.nav__ouvrir svg{ width: 16px; height: 16px; }
+.nav__item--sous:hover .nav__ouvrir, .nav__item--sous.est-ouvert .nav__ouvrir{ transform: rotate(180deg); }
+.sous-menu{
+  position: absolute; top: calc(100% + 20px); left: 50%; z-index: 5;
+  width: min(740px, 92vw); padding: .9rem; border-radius: var(--r-3);
+  background: #fff; color: var(--c-encre); box-shadow: var(--ombre-2); border: 1px solid var(--c-sauge-clair);
+  opacity: 0; visibility: hidden; transform: translate(-50%, 10px);
+  transition: opacity .25s ease, transform .25s ease, visibility .25s;
+}
+.sous-menu::before{ content: ""; position: absolute; left: 0; right: 0; top: -22px; height: 22px; }
+.nav__item--sous:hover .sous-menu, .nav__item--sous:focus-within .sous-menu, .nav__item--sous.est-ouvert .sous-menu{ opacity: 1; visibility: visible; transform: translate(-50%, 0); }
+.sous-menu__liste{ display: grid; grid-template-columns: 1fr 1fr; gap: .2rem; list-style: none; margin: 0; padding: 0; }
+.sous-menu__lien{ display: flex; align-items: center; gap: .85rem; padding: .55rem; border-radius: var(--r-2); text-decoration: none; transition: background-color var(--t-doux); }
+.sous-menu__lien:hover, .sous-menu__lien:focus-visible{ background: var(--c-vert-pale); }
+.sous-menu__lien img{ width: 64px; height: 64px; object-fit: cover; border-radius: 12px; flex: none; }
+.sous-menu__lien strong{ display: block; font-family: var(--f-titre); font-weight: 500; font-size: 1.06rem; line-height: 1.2; letter-spacing: -.01em; }
+.sous-menu__lien small{ display: block; margin-top: .2rem; font-size: .8rem; font-weight: 600; color: var(--c-encre-2); }
+.sous-menu__tout{ display: flex; align-items: center; justify-content: center; gap: .5rem; margin-top: .5rem; padding: .75rem; border-radius: var(--r-2); background: var(--c-creme); color: var(--c-sapin); font-weight: 700; font-size: .95rem; text-decoration: none; }
+.sous-menu__tout:hover{ background: var(--c-vert-clair); }
+.sous-menu__tout svg{ width: 16px; height: 16px; }
 .entete__actions{ display: flex; align-items: center; gap: 1.1rem; }
 .entete__tel{ display: inline-flex; align-items: center; gap: .45rem; font-weight: 700; font-size: 1rem; text-decoration: none; white-space: nowrap; word-spacing: .1em; }
 .btn, .pied__tel, .appel__numero, .coordonnee .grand{ word-spacing: .06em; }
@@ -238,6 +262,10 @@ p{ text-wrap: pretty; }
   font-family: var(--f-titre); font-weight: 500; font-size: 1.9rem; letter-spacing: -.02em; text-decoration: none;
 }
 .nav-mobile__lien[aria-current="page"]{ color: var(--c-vert-texte); font-style: italic; }
+.nav-mobile__lien--parent{ border-bottom: 0; padding-bottom: .3rem; }
+.nav-mobile__sous{ list-style: none; margin: 0; padding: 0 0 .9rem .9rem; display: grid; gap: .1rem; border-bottom: 1px solid var(--c-sauge-clair); }
+.nav-mobile__sous a{ display: block; padding: .42rem 0; font-weight: 600; color: var(--c-encre-2); text-decoration: none; }
+.nav-mobile__sous a::before{ content: ""; display: inline-block; width: 6px; height: 6px; margin-right: .6rem; border-radius: 50%; background: var(--c-vert); vertical-align: middle; }
 .nav-mobile .btn + .btn{ margin-top: .8rem; }
 @media (max-width: 1280px){ .entete__tel span{ display: none; } }
 @media (max-width: 1080px){
@@ -358,6 +386,20 @@ p{ text-wrap: pretty; }
 .ariane a:hover{ text-decoration: underline; }
 .bandeau h1{ font-size: clamp(2.6rem, 5.6vw, 5rem); line-height: .98; letter-spacing: -.03em; max-width: 18ch; margin-bottom: 1rem; text-shadow: 0 2px 30px rgba(0,0,0,.25); }
 .bandeau__chapo{ font-size: var(--t-chapo); max-width: 60ch; color: rgba(255,255,255,.9); }
+.bandeau--logement{ min-height: clamp(560px, 82vh, 780px); }
+.bandeau__type{
+  display: inline-flex; align-items: center; gap: .55rem; margin-bottom: 1rem;
+  padding: .38rem .85rem .38rem .7rem; border-radius: var(--r-pilule);
+  background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.3); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+  font-size: var(--t-label); font-weight: 800; letter-spacing: .16em; text-transform: uppercase;
+}
+.bandeau__type::before{ content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--c-vert); }
+.bandeau__infos{ display: flex; flex-wrap: wrap; gap: .5rem; list-style: none; padding: 0; margin: 1.3rem 0 1.7rem; }
+.bandeau__infos li{
+  display: inline-flex; align-items: center; gap: .45rem; padding: .45rem .9rem; border-radius: var(--r-pilule);
+  background: rgba(255,255,255,.92); color: var(--c-sapin); font-size: .88rem; font-weight: 800;
+}
+.bandeau__infos svg{ width: 17px; height: 17px; color: var(--c-vert-texte); }
 @media (prefers-reduced-motion: reduce){ .bandeau__photo img{ animation: none; } }
 
 /* ---------- 9. Repères chiffrés sous le hero ---------- */
@@ -446,6 +488,24 @@ p{ text-wrap: pretty; }
 }
 .carte-heb__fleche svg{ width: 20px; height: 20px; }
 .carte-heb:hover .carte-heb__fleche{ transform: none; background: var(--c-vert); color: var(--c-encre); border-color: var(--c-vert); }
+
+/* Sommaire des hébergements (V4) : deux lignes de trois cartes, chacune vers sa page */
+.grille-heb{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.1rem; }
+.carte-heb--appel{ background: var(--c-vert); color: var(--c-encre); justify-content: space-between; gap: 1.2rem; padding: 1.8rem; }
+.carte-heb--appel::after{ display: none; }
+.carte-heb--appel .carte-heb__type{ color: var(--c-sapin); }
+.carte-heb--appel h3{ font-size: clamp(1.6rem, 2.4vw, 2.2rem); }
+.carte-heb--appel p{ color: rgba(22,35,29,.78); }
+.carte-heb__icone{ width: 54px; height: 54px; border-radius: 50%; display: grid; place-items: center; background: rgba(255,255,255,.55); color: var(--c-sapin); }
+.carte-heb__icone svg{ width: 26px; height: 26px; }
+.carte-heb--appel .btn{ align-self: flex-start; }
+@media (max-width: 980px){ .grille-heb{ grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 620px){ .grille-heb{ grid-template-columns: 1fr; } .grille-heb .carte-heb{ aspect-ratio: 4 / 3.6; } .grille-heb .carte-heb--appel{ aspect-ratio: auto; } }
+
+/* Les autres hébergements, sur une page d'hébergement : la carte de la page en cours est masquée */
+.carrousel[data-courant="gites"] [data-carte="gites"], .carrousel[data-courant="douglas"] [data-carte="douglas"],
+.carrousel[data-courant="truffier"] [data-carte="truffier"], .carrousel[data-courant="tilleul-acacia"] [data-carte="tilleul-acacia"],
+.carrousel[data-courant="insolites"] [data-carte="insolites"], .carrousel[data-courant="bivouacs"] [data-carte="bivouacs"]{ display: none; }
 
 /* La nuit à la belle étoile : les bivouacs, à part des hébergements en lits */
 .belle-etoile{
