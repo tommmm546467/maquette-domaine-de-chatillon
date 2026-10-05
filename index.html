@@ -193,7 +193,7 @@
 <div class="contenant reperes">
   <dl class="reperes__grille">
     <div class="reperes__item"><dt class="reperes__chiffre">5 <small>ha</small></dt><dd class="reperes__libelle">de domaine en lisière de forêt</dd></div>
-    <div class="reperes__item"><dt class="reperes__chiffre">120 <small>couchages</small></dt><dd class="reperes__libelle">au plus, selon la saison</dd></div>
+    <div class="reperes__item"><dt class="reperes__chiffre">30 <small>personnes</small></dt><dd class="reperes__libelle">par gîte ou chalet, couchages en lits</dd></div>
     <div class="reperes__item"><dt class="reperes__chiffre">9,20 <small>m</small></dt><dd class="reperes__libelle">de piscine chauffée toute l'année</dd></div>
     <div class="reperes__item"><dt class="reperes__chiffre">60 <small>kW</small></dt><dd class="reperes__libelle">de panneaux solaires en toiture</dd></div>
     <div class="reperes__item reperes__item--vert"><dt class="reperes__chiffre">4,1<small>/5</small></dt><dd class="reperes__libelle">sur 186 avis Google</dd></div>
@@ -205,70 +205,86 @@
     <header class="entete-section entete-section--ligne apparait">
       <div>
         <p class="surtitre">Nos hébergements</p>
-        <h2>Des hébergements pour <em>60 à 120 personnes</em></h2>
-        <p class="chapo">Gîtes en pierre, chalets en bois, roulottes, cabanes et bivouacs perchés : plusieurs hébergements sur le même domaine, à combiner selon la taille de votre groupe.</p>
+        <h2>Gîtes, chalets et roulottes, <em>chacun ses chambres</em></h2>
+        <p class="chapo">Des couchages en lits dans chaque hébergement : environ 30 personnes dans les gîtes en pierre, jusqu'à 30 dans chaque chalet avec son extension, 14 dans Tilleul et Acacia. Plusieurs hébergements se combinent pour un grand groupe.</p>
       </div>
-      <a class="lien-fleche" href="hebergements.html">Tous les hébergements<svg aria-hidden="true"><use href="#i-fleche"/></svg></a>
+      <div class="carrousel__commandes">
+        <button type="button" class="carrousel__bouton" data-carrousel="prec" aria-controls="carrousel-heb" aria-label="Hébergements précédents"><svg aria-hidden="true"><use href="#i-gauche"/></svg></button>
+        <button type="button" class="carrousel__bouton" data-carrousel="suiv" aria-controls="carrousel-heb" aria-label="Hébergements suivants"><svg aria-hidden="true"><use href="#i-droite"/></svg></button>
+      </div>
     </header>
-    <div class="bento">
-      <a class="carte-heb carte-heb--grande apparait" href="hebergements.html#gites">
-        <img src="assets/img/gites-cour-1600.jpg" srcset="assets/img/gites-cour-800.jpg 800w, assets/img/gites-cour-1600.jpg 1600w" sizes="(max-width: 980px) 100vw, 760px" width="1600" height="900" alt="La cour des gîtes en pierre : façades ocre, auvents en tuiles et grandes baies vitrées, au soleil" loading="lazy" decoding="async">
-        <span class="carte-heb__capacite"><svg aria-hidden="true"><use href="#i-groupe"/></svg>Environ 30 personnes</span>
-        <span class="carte-heb__fleche" aria-hidden="true"><svg><use href="#i-fleche"/></svg></span>
-        <div class="carte-heb__corps">
-          <p class="carte-heb__type">Les gîtes en pierre</p>
-          <h3>Le Cerisier, le Marronnier et la salle Marsanne</h3>
-          <p>Deux grands gîtes nés d'un ancien séchoir à tabac, aux pierres et charpentes apparentes, reliés par une salle de 75 m².</p>
-        </div>
-      </a>
-      <a class="carte-heb carte-heb--moyenne apparait" href="hebergements.html#chalets">
-        <img src="assets/img/hero-chalet-1600.jpg" srcset="assets/img/hero-chalet-800.jpg 800w, assets/img/hero-chalet-1600.jpg 1600w, assets/img/hero-chalet-2400.jpg 2048w" sizes="(max-width: 620px) 100vw, (max-width: 980px) 50vw, 540px" width="2048" height="1536" alt="Le chalet Douglas en bois, sa terrasse couverte et un grand pin, sous le ciel bleu" loading="lazy" decoding="async">
-        <span class="carte-heb__capacite"><svg aria-hidden="true"><use href="#i-groupe"/></svg>Jusqu'à 30 personnes chacun</span>
-        <span class="carte-heb__fleche" aria-hidden="true"><svg><use href="#i-fleche"/></svg></span>
-        <div class="carte-heb__corps">
-          <p class="carte-heb__type">Les chalets en bois</p>
-          <h3>Le Douglas et le Truffier</h3>
-          <p>Ossature bois, terrasses sur pilotis et vue sur le Vercors.</p>
-        </div>
-      </a>
-      <a class="carte-heb carte-heb--moyenne apparait" href="hebergements.html#bivouacs">
-        <img src="assets/img/bivouac-pilotis-1600.jpg" srcset="assets/img/bivouac-pilotis-800.jpg 800w, assets/img/bivouac-pilotis-1600.jpg 1600w" sizes="(max-width: 620px) 100vw, (max-width: 980px) 50vw, 540px" width="1600" height="1067" alt="La plateforme en bois du bivouac, perchée sur pilotis au milieu des arbres" loading="lazy" decoding="async">
-        <span class="carte-heb__capacite"><svg aria-hidden="true"><use href="#i-groupe"/></svg>Jusqu'à 36 personnes</span>
-        <span class="carte-heb__fleche" aria-hidden="true"><svg><use href="#i-fleche"/></svg></span>
-        <div class="carte-heb__corps">
-          <p class="carte-heb__type">Les bivouacs perchés</p>
-          <h3>Le Bivouac du Haut et le Bivouac du Bas</h3>
-          <p>Deux plateformes de 130 m² à 5 m de haut, en pleine forêt.</p>
-        </div>
-      </a>
-      <a class="carte-heb apparait" href="hebergements.html#tilleul-acacia">
-        <img src="assets/img/tilleul-1600.jpg" srcset="assets/img/tilleul-800.jpg 800w, assets/img/tilleul-1600.jpg 1600w" sizes="(max-width: 620px) 100vw, (max-width: 980px) 50vw, 420px" width="1600" height="1200" alt="Tilleul et Acacia : deux logements en bois autour d&#x27;une cour avec une table de pique-nique" loading="lazy" decoding="async">
-        <span class="carte-heb__capacite"><svg aria-hidden="true"><use href="#i-groupe"/></svg>Jusqu'à 14 personnes</span>
-        <span class="carte-heb__fleche" aria-hidden="true"><svg><use href="#i-fleche"/></svg></span>
-        <div class="carte-heb__corps">
-          <p class="carte-heb__type">Deux logements voisins</p>
-          <h3>Tilleul et Acacia</h3>
-        </div>
-      </a>
-      <a class="carte-heb apparait" href="hebergements.html#insolites">
-        <img src="assets/img/roulotte-1600.jpg" srcset="assets/img/roulotte-800.jpg 800w, assets/img/roulotte-1600.jpg 1600w" sizes="(max-width: 620px) 100vw, (max-width: 980px) 50vw, 420px" width="1600" height="1066" alt="La roulotte en bois du domaine, sa porte jaune et sa petite terrasse, sous les arbres" loading="lazy" decoding="async">
-        <span class="carte-heb__capacite"><svg aria-hidden="true"><use href="#i-lit"/></svg>De 2 à 14 lits</span>
-        <span class="carte-heb__fleche" aria-hidden="true"><svg><use href="#i-fleche"/></svg></span>
-        <div class="carte-heb__corps">
-          <p class="carte-heb__type">Les insolites</p>
-          <h3>Roulottes, cabanes et atelier</h3>
-        </div>
-      </a>
-      <div class="carte-heb carte-heb--appel apparait">
-        <span class="carte-heb__icone"><svg aria-hidden="true"><use href="#i-groupe"/></svg></span>
-        <div>
-          <p class="carte-heb__type">Un groupe, plusieurs hébergements</p>
-          <h3>Dites-nous combien vous êtes</h3>
-          <p>Nous vous proposons la bonne combinaison de gîtes, de chalets et d'insolites.</p>
-        </div>
-        <a class="btn btn--sapin btn--compact" href="contact.html">Nous indiquer votre groupe</a>
+    <div class="carrousel apparait">
+      <div class="carrousel__piste" id="carrousel-heb" tabindex="0" aria-label="Les hébergements, faire défiler">
+        <a class="carte-heb" href="hebergements.html#gites">
+          <img src="assets/img/gites-cour-1600.jpg" srcset="assets/img/gites-cour-800.jpg 800w, assets/img/gites-cour-1600.jpg 1600w" sizes="(max-width: 620px) 86vw, (max-width: 980px) 46vw, 420px" width="1600" height="900" alt="La cour des gîtes en pierre : façades ocre, auvents en tuiles et grandes baies vitrées, au soleil" loading="lazy" decoding="async">
+          <span class="carte-heb__capacite"><svg aria-hidden="true"><use href="#i-lit"/></svg>Environ 30 personnes</span>
+          <span class="carte-heb__fleche" aria-hidden="true"><svg><use href="#i-fleche"/></svg></span>
+          <div class="carte-heb__corps">
+            <p class="carte-heb__type">Les gîtes en pierre</p>
+            <h3>Le Cerisier et le Marronnier</h3>
+            <p>Deux grands gîtes nés d'un ancien séchoir à tabac, reliés par la salle Marsanne.</p>
+          </div>
+        </a>
+        <a class="carte-heb" href="hebergements.html#douglas">
+          <img src="assets/img/hero-chalet-1600.jpg" srcset="assets/img/hero-chalet-800.jpg 800w, assets/img/hero-chalet-1600.jpg 1600w, assets/img/hero-chalet-2400.jpg 2048w" sizes="(max-width: 620px) 86vw, (max-width: 980px) 46vw, 420px" width="2048" height="1536" alt="Le chalet Douglas en bois, sa terrasse couverte et un grand pin, sous le ciel bleu" loading="lazy" decoding="async">
+          <span class="carte-heb__capacite"><svg aria-hidden="true"><use href="#i-lit"/></svg>Jusqu'à 30 personnes</span>
+          <span class="carte-heb__fleche" aria-hidden="true"><svg><use href="#i-fleche"/></svg></span>
+          <div class="carte-heb__corps">
+            <p class="carte-heb__type">Chalet en bois</p>
+            <h3>Le Douglas</h3>
+            <p>80 m² adossés à la colline, une terrasse sur pilotis et son extension de trois chambres.</p>
+          </div>
+        </a>
+        <a class="carte-heb" href="hebergements.html#truffier">
+          <img src="assets/img/truffier-1600.jpg" srcset="assets/img/truffier-800.jpg 800w, assets/img/truffier-1600.jpg 1600w" sizes="(max-width: 620px) 86vw, (max-width: 980px) 46vw, 420px" width="1600" height="1200" alt="Le chalet Truffier en bois, sa grande terrasse couverte et sa barrière, au soleil d&#x27;hiver" loading="lazy" decoding="async">
+          <span class="carte-heb__capacite"><svg aria-hidden="true"><use href="#i-lit"/></svg>Jusqu'à 30 personnes</span>
+          <span class="carte-heb__fleche" aria-hidden="true"><svg><use href="#i-fleche"/></svg></span>
+          <div class="carte-heb__corps">
+            <p class="carte-heb__type">Chalet en bois</p>
+            <h3>Le Truffier</h3>
+            <p>En bordure de forêt, une mezzanine de cinq couchages et son extension de trois chambres.</p>
+          </div>
+        </a>
+        <a class="carte-heb" href="hebergements.html#tilleul-acacia">
+          <img src="assets/img/tilleul-1600.jpg" srcset="assets/img/tilleul-800.jpg 800w, assets/img/tilleul-1600.jpg 1600w" sizes="(max-width: 620px) 86vw, (max-width: 980px) 46vw, 420px" width="1600" height="1200" alt="Tilleul et Acacia : deux logements en bois autour d&#x27;une cour avec une table de pique-nique" loading="lazy" decoding="async">
+          <span class="carte-heb__capacite"><svg aria-hidden="true"><use href="#i-lit"/></svg>Jusqu'à 14 personnes</span>
+          <span class="carte-heb__fleche" aria-hidden="true"><svg><use href="#i-fleche"/></svg></span>
+          <div class="carte-heb__corps">
+            <p class="carte-heb__type">Deux logements voisins</p>
+            <h3>Tilleul et Acacia</h3>
+            <p>Deux hébergements complémentaires autour d'une même cour.</p>
+          </div>
+        </a>
+        <a class="carte-heb" href="hebergements.html#insolites">
+          <img src="assets/img/roulotte-1600.jpg" srcset="assets/img/roulotte-800.jpg 800w, assets/img/roulotte-1600.jpg 1600w" sizes="(max-width: 620px) 86vw, (max-width: 980px) 46vw, 420px" width="1600" height="1066" alt="La roulotte en bois du domaine, sa porte jaune et sa petite terrasse, sous les arbres" loading="lazy" decoding="async">
+          <span class="carte-heb__capacite"><svg aria-hidden="true"><use href="#i-lit"/></svg>Jusqu'à 14 lits</span>
+          <span class="carte-heb__fleche" aria-hidden="true"><svg><use href="#i-fleche"/></svg></span>
+          <div class="carte-heb__corps">
+            <p class="carte-heb__type">Les insolites</p>
+            <h3>Roulottes, cabanes et atelier</h3>
+            <p>La roulotte cosy, la roulotte dortoir de 14 lits, les deux cabanes et l'atelier.</p>
+          </div>
+        </a>
+      </div>
+      <div class="carrousel__bas">
+        <span class="carrousel__progression" aria-hidden="true"><span></span></span>
+        <a class="lien-fleche" href="hebergements.html">Tous les hébergements<svg aria-hidden="true"><use href="#i-fleche"/></svg></a>
       </div>
     </div>
+
+        <article class="belle-etoile apparait" id="belle-etoile">
+      <div class="belle-etoile__photo"><img src="assets/img/bivouac-pilotis-1600.jpg" srcset="assets/img/bivouac-pilotis-800.jpg 800w, assets/img/bivouac-pilotis-1600.jpg 1600w" sizes="(max-width: 860px) 100vw, 560px" width="1600" height="1067" alt="La plateforme en bois du bivouac, perchée sur pilotis au milieu des arbres" loading="lazy" decoding="async"></div>
+      <div class="belle-etoile__texte">
+        <p class="surtitre">En plus : une nuit à la belle étoile</p>
+        <h3>Les bivouacs perchés, <em>de 12 à 36 personnes</em></h3>
+        <p>Deux plateformes sur pilotis à 5 m de haut, en pleine forêt, avec de grandes tentes de 40 m² et des lits pliants. Une nuit simple et « roots », en plus des hébergements.</p>
+        <div class="belle-etoile__chiffres">
+          <span class="pastille"><svg aria-hidden="true"><use href="#i-tente"/></svg>Bivouac du Bas : 12 personnes</span>
+          <span class="pastille"><svg aria-hidden="true"><use href="#i-tente"/></svg>Bivouac du Haut : 24 personnes</span>
+        </div>
+        <a class="lien-fleche" href="hebergements.html#bivouacs">Découvrir les bivouacs<svg aria-hidden="true"><use href="#i-fleche"/></svg></a>
+      </div>
+    </article>
   </div>
 </section>
 
@@ -301,7 +317,7 @@
       <p class="surtitre">Drôme des Collines, entre Vercors et Ardèche</p>
       <h2>Un domaine pensé <em>pour les groupes</em></h2>
       <p class="chapo">Au Domaine de Châtillon, nous accueillons toute l'année les groupes d'amis, les familles, les mariages, les EVG et EVJF, les associations et les entreprises.</p>
-      <p>Sur 5 hectares en lisière de forêt, parsemés de vignes et tournés vers le Vercors, plusieurs hébergements partagent le même site : de 60 à 120 couchages selon la saison. On dort dans un gîte en pierre, un chalet, une roulotte ou sous une tente perchée, puis on se retrouve à la piscine couverte, dans une salle de réception ou sur le terrain de paintball, à quelques pas des gîtes.</p>
+      <p>Sur 5 hectares en lisière de forêt, parsemés de vignes et tournés vers le Vercors, plusieurs hébergements partagent le même site, chacun avec ses chambres, et deux bivouacs perchés offrent une nuit à la belle étoile. On dort dans un gîte en pierre, un chalet ou une roulotte, puis on se retrouve à la piscine couverte, dans une salle de réception ou sur le terrain de paintball, à quelques pas des gîtes.</p>
       <div class="actions">
         <a class="btn btn--sapin" href="le-domaine.html">Découvrir le domaine</a>
         <a class="lien-fleche" href="#acces">Venir au domaine<svg aria-hidden="true"><use href="#i-fleche"/></svg></a>
@@ -315,13 +331,6 @@
     </div>
   </div>
 </section>
-
-<div class="defile" aria-hidden="true">
-  <div class="defile__piste">
-    <p class="defile__groupe"><span>Gîtes en pierre</span><svg><use href="#i-feuille"/></svg><span class="contour">Chalets en bois</span><svg><use href="#i-feuille"/></svg><span>Roulottes</span><svg><use href="#i-feuille"/></svg><span class="contour">Bivouacs perchés</span><svg><use href="#i-feuille"/></svg><span>Piscine couverte</span><svg><use href="#i-feuille"/></svg><span class="contour">Paintball</span><svg><use href="#i-feuille"/></svg></p>
-    <p class="defile__groupe"><span>Gîtes en pierre</span><svg><use href="#i-feuille"/></svg><span class="contour">Chalets en bois</span><svg><use href="#i-feuille"/></svg><span>Roulottes</span><svg><use href="#i-feuille"/></svg><span class="contour">Bivouacs perchés</span><svg><use href="#i-feuille"/></svg><span>Piscine couverte</span><svg><use href="#i-feuille"/></svg><span class="contour">Paintball</span><svg><use href="#i-feuille"/></svg></p>
-  </div>
-</div>
 
 <section class="section section--vert" id="ecoresponsable">
   <div class="contenant eco">
@@ -497,18 +506,77 @@ Je recommande</blockquote>
   </div>
 </section>
 
-<section class="appel" data-sans-barre>
+<section class="appel" id="demande" data-sans-barre>
   <div class="appel__photo"><img src="assets/img/terrasse-vue-1600.jpg" srcset="assets/img/terrasse-vue-800.jpg 800w, assets/img/terrasse-vue-1600.jpg 1600w, assets/img/terrasse-vue-2400.jpg 1920w" sizes="100vw" width="1920" height="1080" alt="" loading="lazy" decoding="async"></div>
-  <div class="contenant appel__grille">
-    <div class="apparait">
+  <div class="contenant appel__grille appel__grille--formulaire">
+    <div class="appel__texte apparait">
       <p class="surtitre">Votre séjour</p>
       <h2>Parlons de votre <em>séjour de groupe</em></h2>
       <p>Indiquez-nous vos dates, votre nombre et votre projet : nous vous répondons avec les hébergements disponibles et confirmons votre séjour.</p>
+      <div class="appel__tel">
+        <small>Ou appelez-nous</small>
+        <a class="appel__numero" href="tel:+33680141850"><svg aria-hidden="true"><use href="#i-tel"/></svg>06 80 14 18 50</a>
+        <a class="lien-fleche" href="contact.html">Toutes nos coordonnées<svg aria-hidden="true"><use href="#i-fleche"/></svg></a>
+      </div>
     </div>
-    <div class="appel__tel apparait">
-      <small>Appelez-nous</small>
-      <a class="appel__numero" href="tel:+33680141850"><svg aria-hidden="true"><use href="#i-tel"/></svg>06 80 14 18 50</a>
-      <a class="btn btn--primaire" href="contact.html">Faire une demande en ligne</a>
+    <div class="apparait">
+      <form class="formulaire" id="form-accueil" data-formulaire data-destinataire="contact@domainedechatillon.fr" data-sujet="Demande de séjour" data-merci="merci-accueil" novalidate>
+        <h3>Votre demande de séjour</h3>
+        <p class="formulaire__intro">Les champs marqués d'un astérisque sont nécessaires pour vous répondre.</p>
+        <div class="champs">
+          <div>
+            <label class="etiquette" for="a-arrivee">Arrivée</label>
+            <input class="champ" id="a-arrivee" name="arrivee" type="date">
+          </div>
+          <div>
+            <label class="etiquette" for="a-depart">Départ</label>
+            <input class="champ" id="a-depart" name="depart" type="date">
+          </div>
+          <div>
+            <label class="etiquette" for="a-personnes">Nombre de personnes</label>
+            <input class="champ" id="a-personnes" name="personnes" type="number" min="1" max="400" inputmode="numeric" placeholder="Par exemple 25">
+          </div>
+          <div>
+            <label class="etiquette" for="a-occasion">L'occasion</label>
+            <select class="champ" id="a-occasion" name="occasion" data-dans-sujet>
+              <option value="">À préciser</option>
+              <option value="amis">Un week-end entre amis</option>
+              <option value="famille">Une cousinade, une fête de famille</option>
+              <option value="evg-evjf">Un EVG ou un EVJF</option>
+              <option value="mariage">Un mariage</option>
+              <option value="entreprise">Un séminaire, un team building</option>
+              <option value="vacances">Des vacances</option>
+              <option value="autre">Autre chose</option>
+            </select>
+          </div>
+          <div>
+            <label class="etiquette" for="a-nom">Votre nom *</label>
+            <input class="champ" id="a-nom" name="nom" type="text" autocomplete="name" required data-manque="votre nom">
+          </div>
+          <div>
+            <label class="etiquette" for="a-email">Votre e-mail *</label>
+            <input class="champ" id="a-email" name="email" type="email" autocomplete="email" required data-manque="votre e-mail">
+          </div>
+          <div class="large">
+            <label class="etiquette" for="a-tel">Votre téléphone <small>(pour vous rappeler plus vite)</small></label>
+            <input class="champ" id="a-tel" name="telephone" type="tel" autocomplete="tel">
+          </div>
+          <div class="large">
+            <label class="etiquette" for="a-message">Votre message</label>
+            <textarea class="champ" id="a-message" name="message" placeholder="Votre groupe, les hébergements qui vous intéressent, vos questions..."></textarea>
+          </div>
+        </div>
+        <p class="formulaire__erreurs" role="alert" hidden></p>
+        <div class="formulaire__pied">
+          <p class="formulaire__mention">Votre demande ouvre un e-mail prêt à partir vers le domaine. Nous vous répondons avec les disponibilités et les tarifs.</p>
+          <button class="btn btn--primaire" type="submit">Envoyer ma demande</button>
+        </div>
+      </form>
+      <div class="formulaire merci" id="merci-accueil" hidden>
+        <svg aria-hidden="true"><use href="#i-coche"/></svg>
+        <h3>Votre e-mail est prêt</h3>
+        <p>Envoyez-le depuis votre messagerie : nous vous répondons rapidement. Pour aller plus vite, appelez-nous au <a href="tel:+33680141850">06 80 14 18 50</a>.</p>
+      </div>
     </div>
   </div>
 </section>

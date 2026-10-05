@@ -6,6 +6,7 @@
    4. Film YouTube chargé au clic (youtube-nocookie), dans une fenêtre ou dans son cadre
    5. Formulaires de demande : vérification, puis e-mail préparé
    6. Apparitions au défilement, barre d'appel mobile, sous-navigation active
+   7. Carrousel des hébergements de l'accueil (flèches, barre de progression)
    Aucun framework, aucune dépendance.
    ============================================================ */
 (function (window, document) {
@@ -257,4 +258,37 @@
     });
   }
   if (liens.length) { window.addEventListener('scroll', majSousNav, { passive: true }); majSousNav(); }
+
+  /* ---------- 7. Carrousel des hébergements ---------- */
+  // Une ligne de cartes qui défile (défilement natif et aimanté) ; les flèches avancent d'une carte.
+  $$('.carrousel__piste').forEach(function (piste) {
+    var boutons = $$('[data-carrousel][aria-controls="' + piste.id + '"]');
+    var barre = $('.carrousel__progression span', piste.parentNode);
+    function pas() {
+      var carte = piste.firstElementChild;
+      var ecart = parseFloat(getComputedStyle(piste).columnGap) || 0;
+      return carte ? carte.getBoundingClientRect().width + ecart : piste.clientWidth;
+    }
+    function maj() {
+      var max = piste.scrollWidth - piste.clientWidth;
+      boutons.forEach(function (b) {
+        b.disabled = b.getAttribute('data-carrousel') === 'prec' ? piste.scrollLeft <= 2 : piste.scrollLeft >= max - 2;
+      });
+      if (barre && piste.scrollWidth) {
+        barre.style.setProperty('--part', (piste.clientWidth / piste.scrollWidth * 100) + '%');
+        barre.style.setProperty('--decalage', (piste.scrollLeft / piste.scrollWidth * 100) + '%');
+      }
+    }
+    boutons.forEach(function (b) {
+      b.addEventListener('click', function () {
+        piste.scrollBy({ left: (b.getAttribute('data-carrousel') === 'prec' ? -1 : 1) * pas(), behavior: reduit ? 'auto' : 'smooth' });
+      });
+    });
+    piste.addEventListener('scroll', maj, { passive: true });
+    window.addEventListener('resize', maj);
+    piste.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') { e.preventDefault(); piste.scrollBy({ left: (e.key === 'ArrowLeft' ? -1 : 1) * pas() }); }
+    });
+    maj();
+  });
 })(window, document);
