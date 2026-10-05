@@ -1,0 +1,67 @@
+/* ============================================================
+   DOMAINE DE CHÂTILLON : jetons de la direction artistique
+   « Olive, vigne et bois »
+
+   Les couleurs sont celles du site actuel du domaine : l'olive
+   sombre de son en-tête et de son logo (#333B24), le vert tendre
+   de ses boutons (#ADC67B), le gris sauge de ses filets (#B6BBAC)
+   et le bandeau de bois clair qui sépare ses sections.
+   Le texte vert sur fond clair est foncé pour rester lisible.
+   ============================================================ */
+:root{
+  /* Couleurs */
+  --c-olive:        #333B24;  /* le logo et l'en-tête du site actuel : textes, sections sombres */
+  --c-olive-nuit:   #252B1A;  /* pied de page */
+  --c-olive-2:      #47502F;  /* surfaces sombres secondaires, filets sur sombre */
+  --c-texte:        #2A2F20;
+  --c-texte-2:      #5C6250;  /* texte secondaire sur clair : 6,1:1 sur lin */
+  --c-vert:         #ADC67B;  /* le vert du site actuel : boutons, accents, étoiles */
+  --c-vert-vif:     #BCD38C;  /* survol des boutons */
+  --c-vert-clair:   #DDE8C4;
+  --c-vert-pale:    #EEF3E2;
+  --c-vert-texte:   #566E2C;  /* vert en texte sur clair : 5,4:1 sur blanc */
+  --c-sauge:        #B6BBAC;  /* les filets du site actuel */
+  --c-sauge-clair:  #DEE0D7;
+  --c-sauge-texte:  #C9CEBE;  /* texte secondaire sur olive : 7,9:1 */
+  --c-lin:          #F4F2EA;  /* fonds de section */
+  --c-blanc:        #FBFAF6;  /* fond principal */
+  --c-bois:         #B98552;  /* le bandeau bois du site actuel */
+  --c-bois-clair:   #E4CBA6;
+  --c-bois-texte:   #8A5A2B;
+  --c-erreur:       #B42318;
+
+  /* Typographie : Alegreya (titres, empattements solides) et Alegreya Sans
+     (texte), la famille du site actuel */
+  --f-titre: "Alegreya", Georgia, "Times New Roman", serif;
+  --f-texte: "Alegreya Sans", "Helvetica Neue", Arial, sans-serif;
+
+  --t-hero:   clamp(2.6rem, 5.6vw, 5.1rem);
+  --t-h2:     clamp(2.1rem, 3.8vw, 3.4rem);
+  --t-h3:     clamp(1.4rem, 2vw, 1.8rem);
+  --t-chapo:  clamp(1.12rem, 1.3vw, 1.27rem);
+  --t-texte:  1.125rem;
+  --t-petit:  .95rem;
+  --t-label:  .8rem;
+
+  /* Espaces */
+  --contenant: 1240px;
+  --gouttiere: clamp(16px, 4vw, 44px);
+  --section:   clamp(4.5rem, 9vw, 8rem);
+  --h-entete: 84px;
+
+  /* Formes */
+  --r-1: 4px;
+  --r-2: 10px;
+  --r-3: 18px;
+  --r-pilule: 999px;
+  --ombre-1: 0 1px 2px rgba(37,43,26,.06), 0 12px 32px rgba(37,43,26,.09);
+  --ombre-2: 0 24px 60px rgba(37,43,26,.24);
+
+  /* Mouvement */
+  --t-rideau: .9s cubic-bezier(.76,0,.24,1);
+  --t-doux:   .45s cubic-bezier(.2,.7,.2,1);
+  --z-entete: 100; --z-barre: 90; --z-modale: 1000; --z-loader: 9999;
+}
+@media (max-width: 767px){
+  :root{ --h-entete: 68px; --t-texte: 1.0625rem; }
+}
