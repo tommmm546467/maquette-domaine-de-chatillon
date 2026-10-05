@@ -14,20 +14,23 @@
   var DC = window.DC = window.DC || {};
 
   var DUREE = 2000;         // durée d'affichage : 2 secondes
-  var DUREE_RIDEAU = 900;   // doit correspondre à --t-rideau
+  var DUREE_RIDEAU = 1000;  // doit correspondre à --t-rideau
 
+  var racine = document.documentElement;
   var loader = document.getElementById('loader');
-  if (!loader) { DC.rideauParti = true; return; }
+  // « hero-pret » lance l'entrée du texte du hero (site.css, section 7)
+  if (!loader) { DC.rideauParti = true; racine.classList.add('hero-pret'); return; }
 
   function retirer() {
     if (!loader || !loader.parentNode) return;
     loader.parentNode.removeChild(loader);
     document.body.classList.remove('est-verrouille');
     loader = null;
+    racine.classList.add('hero-pret');
     var id = window.location.hash.slice(1);
     var cible = id && document.getElementById(id);
     if (cible) cible.scrollIntoView({ block: 'start' });
-    // Le diaporama du hero attend ce signal pour lancer son premier décompte.
+    // Signal de fin pour les scripts qui attendent que le rideau soit retiré.
     DC.rideauParti = true;
     document.dispatchEvent(new CustomEvent('dc:rideau-parti'));
   }
@@ -40,6 +43,9 @@
     if (parti || !loader) return;
     parti = true;
     loader.setAttribute('data-sortie', '1');
+    racine.classList.add('hero-pret');
+    // La vidéo du hero attend ce signal pour repartir de son premier plan pendant que le rideau monte.
+    document.dispatchEvent(new CustomEvent('dc:rideau-sortie'));
     window.setTimeout(retirer, DUREE_RIDEAU);
   }
   window.setTimeout(sortir, DUREE);

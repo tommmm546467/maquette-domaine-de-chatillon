@@ -1,9 +1,9 @@
 /* ============================================================
    DOMAINE DE CHÂTILLON : comportements communs aux pages
-   1. En-tête (transparent sur la photo d'en-tête, olive ensuite) et menu mobile
-   2. Diaporama du hero de l'accueil (trois photos en fondu, légende)
+   1. En-tête (transparent sur la vidéo ou la photo d'en-tête, blanc ensuite) et menu mobile
+   2. Vidéo du hero de l'accueil (boucle muette, repartie du début quand le rideau se lève)
    3. Visionneuse plein écran (vignettes, galeries, affiches)
-   4. Vidéo YouTube chargée au clic (youtube-nocookie)
+   4. Film YouTube chargé au clic (youtube-nocookie), dans une fenêtre ou dans son cadre
    5. Formulaires de demande : vérification, puis e-mail préparé
    6. Apparitions au défilement, barre d'appel mobile, sous-navigation active
    Aucun framework, aucune dépendance.
@@ -47,30 +47,21 @@
   $$('#nav-mobile a').forEach(function (a) { a.addEventListener('click', function () { basculerMenu(false); }); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') basculerMenu(false); });
 
-  /* ---------- 2. Diaporama du hero ---------- */
-  var diapos = $$('.hero__diapo');
-  var legende = $('#hero-legende-texte');
-  var points = $$('.hero__point');
-  var courant = 0, minuteur = null;
-  function montrer(i) {
-    diapos[courant].classList.remove('est-active');
-    if (points[courant]) points[courant].classList.remove('est-actif');
-    courant = i;
-    diapos[courant].classList.add('est-active');
-    if (points[courant]) points[courant].classList.add('est-actif');
-    if (legende) legende.textContent = diapos[courant].getAttribute('data-legende') || '';
-  }
-  function lancerDiaporama() {
-    if (diapos.length < 2 || reduit || minuteur) return;
-    minuteur = window.setInterval(function () { montrer((courant + 1) % diapos.length); }, 6500);
-  }
-  if (diapos.length) {
-    if (DC.rideauParti) lancerDiaporama();
-    else document.addEventListener('dc:rideau-parti', lancerDiaporama, { once: true });
-    document.addEventListener('visibilitychange', function () {
-      if (document.hidden && minuteur) { window.clearInterval(minuteur); minuteur = null; }
-      else if (!document.hidden) lancerDiaporama();
-    });
+  /* ---------- 2. Vidéo du hero ---------- */
+  // La boucle joue d'elle-même (autoplay, muted, playsinline). Elle repart du premier plan quand le
+  // rideau de l'écran d'entrée se lève ; elle reste sur son affiche si le système demande moins
+  // d'animations, et se met en pause quand l'onglet est caché.
+  var video = $('.hero__video');
+  if (video) {
+    if (reduit) { video.removeAttribute('autoplay'); video.pause(); }
+    else {
+      var relancer = function () { try { video.currentTime = 0; } catch (e) { } var p = video.play(); if (p && p.catch) p.catch(function () { }); };
+      if (!DC.rideauParti) document.addEventListener('dc:rideau-sortie', relancer, { once: true });
+      document.addEventListener('visibilitychange', function () {
+        if (document.hidden) video.pause();
+        else { var p = video.play(); if (p && p.catch) p.catch(function () { }); }
+      });
+    }
   }
 
   /* ---------- 3. Visionneuse ---------- */
@@ -122,20 +113,37 @@
     });
   }
 
-  /* ---------- 4. Vidéo ---------- */
+  /* ---------- 4. Film YouTube ---------- */
+  var film = $('#film');
+  function iframeFilm(b) {
+    var f = document.createElement('iframe');
+    f.src = 'https://www.youtube-nocookie.com/embed/' + b.getAttribute('data-video') + '?autoplay=1&rel=0&modestbranding=1';
+    f.title = b.getAttribute('data-titre') || 'Vidéo';
+    f.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+    f.allowFullscreen = true;
+    f.referrerPolicy = 'strict-origin-when-cross-origin';
+    return f;
+  }
   $$('[data-video]').forEach(function (b) {
     b.addEventListener('click', function () {
       var cadre = b.closest('.video__cadre');
-      var f = document.createElement('iframe');
-      f.src = 'https://www.youtube-nocookie.com/embed/' + b.getAttribute('data-video') + '?autoplay=1&rel=0&modestbranding=1';
-      f.title = b.getAttribute('data-titre') || 'Vidéo';
-      f.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
-      f.allowFullscreen = true;
-      f.referrerPolicy = 'strict-origin-when-cross-origin';
-      cadre.appendChild(f);
-      b.remove();
+      if (cadre) { cadre.appendChild(iframeFilm(b)); b.remove(); return; }
+      if (!film || typeof film.showModal !== 'function') { window.open('https://www.youtube.com/watch?v=' + b.getAttribute('data-video'), '_blank', 'noopener'); return; }
+      $('.film__cadre', film).appendChild(iframeFilm(b));
+      if (video) video.pause();
+      film.showModal();
+      document.body.style.overflow = 'hidden';
     });
   });
+  if (film) {
+    $('.film__fermer', film).addEventListener('click', function () { film.close(); });
+    film.addEventListener('click', function (e) { if (e.target === film) film.close(); });
+    film.addEventListener('close', function () {
+      $('.film__cadre', film).innerHTML = '';
+      document.body.style.overflow = '';
+      if (video && !reduit) { var p = video.play(); if (p && p.catch) p.catch(function () { }); }
+    });
+  }
 
   /* ---------- 5. Formulaires de demande ---------- */
   // Une adresse peut préremplir le formulaire : contact.html?hebergement=douglas, evenements.html?type=mariage#demande

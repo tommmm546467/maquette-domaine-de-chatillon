@@ -6,7 +6,7 @@
 <title>Gîtes de groupe dans la Drôme | Domaine de Châtillon</title>
 <meta name="description" content="Domaine de 5 ha pour les groupes dans la Drôme : gîtes, chalets, roulottes, bivouacs, piscine couverte et activités, à 12 min de Romans-sur-Isère.">
 <meta name="robots" content="noindex, nofollow">
-<meta name="theme-color" content="#333B24">
+<meta name="theme-color" content="#1F4D3A">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_FR">
 <meta property="og:site_name" content="Domaine de Châtillon">
@@ -17,12 +17,12 @@
 <link rel="apple-touch-icon" href="assets/logo/favicon-192.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Alegreya+Sans:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Manrope:wght@400..800&display=swap">
 <style>
-  :root{--c-olive:#333B24;--c-blanc:#FBFAF6;--h-entete:84px}
+  :root{--c-sapin-nuit:#12301F;--c-blanc:#FFFFFF;--h-entete:84px}
   html{background:var(--c-blanc)}
-  body{margin:0;font-family:"Alegreya Sans",Helvetica,Arial,sans-serif;color:#2A2F20}
-  .loader{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;background:var(--c-olive)}
+  body{margin:0;font-family:"Manrope",Helvetica,Arial,sans-serif;color:#16231D}
+  .loader{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;background:var(--c-sapin-nuit)}
   .entete{position:sticky;top:0;z-index:100;height:var(--h-entete);display:flex;align-items:center}
   @media (max-width:767px){:root{--h-entete:68px}}
 </style>
@@ -107,15 +107,16 @@
 </svg>
 
 
+
 <div class="loader" id="loader" aria-hidden="true">
-  <div class="loader__fond"><img src="assets/img/intro-1600.jpg" srcset="assets/img/intro-800.jpg 800w, assets/img/intro-1600.jpg 1600w, assets/img/intro-2400.jpg 2000w" sizes="100vw" width="2000" height="1500" alt="" loading="eager" decoding="async"></div>
+  <div class="loader__fond"><img src="assets/img/intro-1600.jpg" srcset="assets/img/intro-800.jpg 800w, assets/img/intro-1600.jpg 1600w, assets/img/intro-2400.jpg 1920w" sizes="(orientation: portrait) 180vh, 100vw" width="1920" height="1080" alt="" loading="eager" decoding="async"></div>
   <div class="loader__voile"></div>
   <div class="loader__logo">
-    <img class="loader__embleme" src="assets/logo/embleme.png" width="442" height="397" alt="">
+    <img class="loader__embleme" src="assets/logo/embleme-blanc.png" width="442" height="397" alt="">
     <span class="loader__nom"><span class="logo__petit">Domaine de</span><span class="logo__grand">Châtillon</span></span>
-    <span class="loader__filet"></span>
-    <span class="loader__lieu">Gîtes de groupe · Hébergements insolites · Drôme</span>
+    <span class="loader__lieu">Gîtes de groupe · Drôme des Collines</span>
   </div>
+  <div class="loader__barre"><span></span></div>
 </div>
 
 <a class="saut-contenu" href="#contenu">Aller au contenu</a>
@@ -123,7 +124,8 @@
 <header class="entete" id="entete" data-etat="transparent">
   <div class="contenant entete__grille">
     <a class="logo entete__logo" href="index.html" aria-label="Domaine de Châtillon, page d'accueil">
-      <img class="logo__img" src="assets/logo/embleme.png" width="442" height="397" alt="">
+      <img class="logo__img logo__img--photo" src="assets/logo/embleme-blanc.png" width="442" height="397" alt="">
+      <img class="logo__img logo__img--clair" src="assets/logo/embleme-clair.png" width="442" height="397" alt="">
       <span class="logo__mots"><span class="logo__petit">Domaine de</span><span class="logo__grand">Châtillon</span></span>
     </a>
     <nav class="nav" aria-label="Navigation principale">
@@ -157,7 +159,7 @@
       <li><a class="nav-mobile__lien"  href="contact.html">Contact</a></li>
     </ul>
     <a class="btn btn--primaire btn--pleine" href="contact.html">Faire une demande</a>
-    <a class="btn btn--fantome btn--pleine" href="tel:+33680141850"><svg aria-hidden="true"><use href="#i-tel"/></svg>Appeler le 06 80 14 18 50</a>
+    <a class="btn btn--contour btn--pleine" href="tel:+33680141850"><svg aria-hidden="true"><use href="#i-tel"/></svg>Appeler le 06 80 14 18 50</a>
   </nav>
 </div>
 
@@ -165,25 +167,27 @@
 <main id="contenu">
 
 <section class="hero" id="haut" aria-label="Présentation">
-  <div class="hero__diapos">
-    <figure class="hero__diapo est-active" data-legende="Le Douglas, chalet en ossature bois"><img src="assets/img/hero-chalet-1600.jpg" srcset="assets/img/hero-chalet-800.jpg 800w, assets/img/hero-chalet-1600.jpg 1600w, assets/img/hero-chalet-2400.jpg 2048w" sizes="100vw" width="2048" height="1536" alt="Le chalet Douglas en bois, sa terrasse couverte et un grand pin, face aux collines de la Drôme" loading="eager" fetchpriority="high" decoding="async"></figure>
-    <figure class="hero__diapo" data-legende="La piscine intérieure et son jacuzzi"><img src="assets/img/hero-piscine-1600.jpg" srcset="assets/img/hero-piscine-800.jpg 800w, assets/img/hero-piscine-1600.jpg 1600w, assets/img/hero-piscine-2400.jpg 1920w" sizes="100vw" width="1920" height="1280" alt="La piscine intérieure chauffée du domaine, son jacuzzi à débordement et ses murs en bois" loading="eager" decoding="async"></figure>
-    <figure class="hero__diapo" data-legende="La salle Altesse dressée pour une réception"><img src="assets/img/hero-salle-1600.jpg" srcset="assets/img/hero-salle-800.jpg 800w, assets/img/hero-salle-1600.jpg 1600w, assets/img/hero-salle-2400.jpg 1920w" sizes="100vw" width="1920" height="1440" alt="La salle Altesse sous sa charpente blanche, tables nappées dressées en U pour un repas de groupe" loading="eager" decoding="async"></figure>
-  </div>
+  <video class="hero__video" autoplay muted loop playsinline preload="auto" poster="assets/img/hero-video-1600.jpg" aria-hidden="true" tabindex="-1">
+    <source src="assets/video/domaine-960.mp4" type="video/mp4" media="(max-width: 767px)">
+    <source src="assets/video/domaine-1920.mp4" type="video/mp4">
+  </video>
   <div class="hero__voile"></div>
   <div class="contenant hero__contenu">
     <a class="hero__avis" href="#avis">
       <span class="etoiles" aria-hidden="true"><svg><use href="#i-etoile"/></svg><svg><use href="#i-etoile"/></svg><svg><use href="#i-etoile"/></svg><svg><use href="#i-etoile"/></svg><svg style="opacity:.35"><use href="#i-etoile"/></svg></span>
       <span><strong>4,1/5</strong> · 186 avis Google</span>
     </a>
-    <h1 class="hero__titre"><span class="hero__nom">Domaine de Châtillon,</span> <span class="hero__metier">gîtes de groupe dans la Drôme</span></h1>
+    <h1 class="hero__titre"><span class="hero__nom">Domaine de Châtillon<span class="visuellement-cache">,</span></span> <span class="hero__metier">gîtes de groupe dans la Drôme</span></h1>
     <p class="hero__sous-titre">Gîtes en pierre, chalets, roulottes et bivouacs perchés sur un domaine de 5 hectares, avec piscine couverte et activités sur place, à 12 minutes de Romans-sur-Isère.</p>
     <div class="actions">
       <a class="btn btn--primaire" href="hebergements.html">Voir les hébergements</a>
-      <a class="btn btn--fantome" href="tel:+33680141850"><svg aria-hidden="true"><use href="#i-tel"/></svg>06 80 14 18 50</a>
+      <a class="btn btn--verre" href="tel:+33680141850"><svg aria-hidden="true"><use href="#i-tel"/></svg>06 80 14 18 50</a>
+      <button type="button" class="hero__film" data-video="h5gR-hXIhOQ" data-titre="Domaine de Châtillon, le film">
+        <span class="hero__film-rond"><svg aria-hidden="true"><use href="#i-lecture"/></svg></span>Voir le film du domaine
+      </button>
     </div>
   </div>
-  <p class="hero__legende"><span id="hero-legende-texte">Le Douglas, chalet en ossature bois</span><span class="hero__points" aria-hidden="true"><span class="hero__point est-actif"></span><span class="hero__point"></span><span class="hero__point"></span></span></p>
+  <p class="hero__legende">Le domaine vu du ciel</p>
 </section>
 
 <div class="contenant reperes">
@@ -196,6 +200,101 @@
   </dl>
 </div>
 
+<section class="section" id="hebergements">
+  <div class="contenant">
+    <header class="entete-section entete-section--ligne apparait">
+      <div>
+        <p class="surtitre">Nos hébergements</p>
+        <h2>Des hébergements pour <em>60 à 120 personnes</em></h2>
+        <p class="chapo">Gîtes en pierre, chalets en bois, roulottes, cabanes et bivouacs perchés : plusieurs hébergements sur le même domaine, à combiner selon la taille de votre groupe.</p>
+      </div>
+      <a class="lien-fleche" href="hebergements.html">Tous les hébergements<svg aria-hidden="true"><use href="#i-fleche"/></svg></a>
+    </header>
+    <div class="bento">
+      <a class="carte-heb carte-heb--grande apparait" href="hebergements.html#gites">
+        <img src="assets/img/gites-cour-1600.jpg" srcset="assets/img/gites-cour-800.jpg 800w, assets/img/gites-cour-1600.jpg 1600w" sizes="(max-width: 980px) 100vw, 760px" width="1600" height="900" alt="La cour des gîtes en pierre : façades ocre, auvents en tuiles et grandes baies vitrées, au soleil" loading="lazy" decoding="async">
+        <span class="carte-heb__capacite"><svg aria-hidden="true"><use href="#i-groupe"/></svg>Environ 30 personnes</span>
+        <span class="carte-heb__fleche" aria-hidden="true"><svg><use href="#i-fleche"/></svg></span>
+        <div class="carte-heb__corps">
+          <p class="carte-heb__type">Les gîtes en pierre</p>
+          <h3>Le Cerisier, le Marronnier et la salle Marsanne</h3>
+          <p>Deux grands gîtes nés d'un ancien séchoir à tabac, aux pierres et charpentes apparentes, reliés par une salle de 75 m².</p>
+        </div>
+      </a>
+      <a class="carte-heb carte-heb--moyenne apparait" href="hebergements.html#chalets">
+        <img src="assets/img/hero-chalet-1600.jpg" srcset="assets/img/hero-chalet-800.jpg 800w, assets/img/hero-chalet-1600.jpg 1600w, assets/img/hero-chalet-2400.jpg 2048w" sizes="(max-width: 620px) 100vw, (max-width: 980px) 50vw, 540px" width="2048" height="1536" alt="Le chalet Douglas en bois, sa terrasse couverte et un grand pin, sous le ciel bleu" loading="lazy" decoding="async">
+        <span class="carte-heb__capacite"><svg aria-hidden="true"><use href="#i-groupe"/></svg>Jusqu'à 30 personnes chacun</span>
+        <span class="carte-heb__fleche" aria-hidden="true"><svg><use href="#i-fleche"/></svg></span>
+        <div class="carte-heb__corps">
+          <p class="carte-heb__type">Les chalets en bois</p>
+          <h3>Le Douglas et le Truffier</h3>
+          <p>Ossature bois, terrasses sur pilotis et vue sur le Vercors.</p>
+        </div>
+      </a>
+      <a class="carte-heb carte-heb--moyenne apparait" href="hebergements.html#bivouacs">
+        <img src="assets/img/bivouac-pilotis-1600.jpg" srcset="assets/img/bivouac-pilotis-800.jpg 800w, assets/img/bivouac-pilotis-1600.jpg 1600w" sizes="(max-width: 620px) 100vw, (max-width: 980px) 50vw, 540px" width="1600" height="1067" alt="La plateforme en bois du bivouac, perchée sur pilotis au milieu des arbres" loading="lazy" decoding="async">
+        <span class="carte-heb__capacite"><svg aria-hidden="true"><use href="#i-groupe"/></svg>Jusqu'à 36 personnes</span>
+        <span class="carte-heb__fleche" aria-hidden="true"><svg><use href="#i-fleche"/></svg></span>
+        <div class="carte-heb__corps">
+          <p class="carte-heb__type">Les bivouacs perchés</p>
+          <h3>Le Bivouac du Haut et le Bivouac du Bas</h3>
+          <p>Deux plateformes de 130 m² à 5 m de haut, en pleine forêt.</p>
+        </div>
+      </a>
+      <a class="carte-heb apparait" href="hebergements.html#tilleul-acacia">
+        <img src="assets/img/tilleul-1600.jpg" srcset="assets/img/tilleul-800.jpg 800w, assets/img/tilleul-1600.jpg 1600w" sizes="(max-width: 620px) 100vw, (max-width: 980px) 50vw, 420px" width="1600" height="1200" alt="Tilleul et Acacia : deux logements en bois autour d&#x27;une cour avec une table de pique-nique" loading="lazy" decoding="async">
+        <span class="carte-heb__capacite"><svg aria-hidden="true"><use href="#i-groupe"/></svg>Jusqu'à 14 personnes</span>
+        <span class="carte-heb__fleche" aria-hidden="true"><svg><use href="#i-fleche"/></svg></span>
+        <div class="carte-heb__corps">
+          <p class="carte-heb__type">Deux logements voisins</p>
+          <h3>Tilleul et Acacia</h3>
+        </div>
+      </a>
+      <a class="carte-heb apparait" href="hebergements.html#insolites">
+        <img src="assets/img/roulotte-1600.jpg" srcset="assets/img/roulotte-800.jpg 800w, assets/img/roulotte-1600.jpg 1600w" sizes="(max-width: 620px) 100vw, (max-width: 980px) 50vw, 420px" width="1600" height="1066" alt="La roulotte en bois du domaine, sa porte jaune et sa petite terrasse, sous les arbres" loading="lazy" decoding="async">
+        <span class="carte-heb__capacite"><svg aria-hidden="true"><use href="#i-lit"/></svg>De 2 à 14 lits</span>
+        <span class="carte-heb__fleche" aria-hidden="true"><svg><use href="#i-fleche"/></svg></span>
+        <div class="carte-heb__corps">
+          <p class="carte-heb__type">Les insolites</p>
+          <h3>Roulottes, cabanes et atelier</h3>
+        </div>
+      </a>
+      <div class="carte-heb carte-heb--appel apparait">
+        <span class="carte-heb__icone"><svg aria-hidden="true"><use href="#i-groupe"/></svg></span>
+        <div>
+          <p class="carte-heb__type">Un groupe, plusieurs hébergements</p>
+          <h3>Dites-nous combien vous êtes</h3>
+          <p>Nous vous proposons la bonne combinaison de gîtes, de chalets et d'insolites.</p>
+        </div>
+        <a class="btn btn--sapin btn--compact" href="contact.html">Nous indiquer votre groupe</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--lin" id="detente">
+  <div class="contenant detente">
+    <div class="detente__photos apparait">
+      <button type="button" class="vignette" data-grand="assets/img/piscine-bassin-1600.jpg" data-serie="piscine" data-legende="La piscine intérieure, chauffée toute l&#x27;année" data-alt="La piscine intérieure, chauffée toute l&#x27;année"><img src="assets/img/piscine-bassin-1600.jpg" srcset="assets/img/piscine-bassin-800.jpg 800w, assets/img/piscine-bassin-1600.jpg 1600w" sizes="(max-width: 900px) 70vw, 460px" width="1600" height="1067" alt="La piscine intérieure, chauffée toute l&#x27;année" loading="lazy" decoding="async"></button>
+          <button type="button" class="vignette" data-grand="assets/img/piscine-jacuzzi-1600.jpg" data-serie="piscine" data-legende="Le jacuzzi à débordement, attenant au bassin" data-alt="Le jacuzzi à débordement, attenant au bassin"><img src="assets/img/piscine-jacuzzi-1600.jpg" srcset="assets/img/piscine-jacuzzi-800.jpg 800w, assets/img/piscine-jacuzzi-1600.jpg 1600w" sizes="(max-width: 900px) 70vw, 460px" width="1600" height="1067" alt="Le jacuzzi à débordement, attenant au bassin" loading="lazy" decoding="async"></button>
+          <button type="button" class="vignette" data-grand="assets/img/piscine-vue-1600.jpg" data-serie="piscine" data-legende="Le bassin de 9,20 m sur 4,50 m" data-alt="Le bassin de 9,20 m sur 4,50 m"><img src="assets/img/piscine-vue-1600.jpg" srcset="assets/img/piscine-vue-800.jpg 800w, assets/img/piscine-vue-1600.jpg 1600w" sizes="(max-width: 900px) 70vw, 460px" width="1600" height="1067" alt="Le bassin de 9,20 m sur 4,50 m" loading="lazy" decoding="async"></button>
+      <span class="detente__badge"><svg aria-hidden="true"><use href="#i-soleil"/></svg>Chauffée toute l'année</span>
+    </div>
+    <div class="detente__texte apparait">
+      <p class="surtitre">L'espace détente</p>
+      <h2>Piscine couverte et jacuzzi, <em>toute l'année</em></h2>
+      <p class="chapo">Dans un bâtiment indépendant au cœur du domaine, la piscine intérieure rassemble tout le groupe, quel que soit le temps.</p>
+      <div class="atouts">
+        <p class="atout"><span class="atout__icone"><svg aria-hidden="true"><use href="#i-piscine"/></svg></span><span><strong>9,20 m sur 4,50 m</strong>Un bassin chauffé toute l'année</span></p>
+        <p class="atout"><span class="atout__icone"><svg aria-hidden="true"><use href="#i-goutte"/></svg></span><span><strong>Jacuzzi</strong>Attenant au bassin, à débordement</span></p>
+        <p class="atout"><span class="atout__icone"><svg aria-hidden="true"><use href="#i-horloge"/></svg></span><span><strong>24 h sur 24</strong>Pendant le séjour, en option</span></p>
+        <p class="atout"><span class="atout__icone"><svg aria-hidden="true"><use href="#i-cle"/></svg></span><span><strong>Privatisable</strong>Commun aux gîtes, réservable pour votre groupe</span></p>
+      </div>
+      <div class="actions"><a class="lien-fleche" href="le-domaine.html#detente">L'espace détente en détail<svg aria-hidden="true"><use href="#i-fleche"/></svg></a></div>
+    </div>
+  </div>
+</section>
+
 <section class="section" id="presentation">
   <div class="contenant presentation">
     <div class="presentation__texte apparait">
@@ -204,84 +303,27 @@
       <p class="chapo">Au Domaine de Châtillon, nous accueillons toute l'année les groupes d'amis, les familles, les mariages, les EVG et EVJF, les associations et les entreprises.</p>
       <p>Sur 5 hectares en lisière de forêt, parsemés de vignes et tournés vers le Vercors, plusieurs hébergements partagent le même site : de 60 à 120 couchages selon la saison. On dort dans un gîte en pierre, un chalet, une roulotte ou sous une tente perchée, puis on se retrouve à la piscine couverte, dans une salle de réception ou sur le terrain de paintball, à quelques pas des gîtes.</p>
       <div class="actions">
-        <a class="btn btn--olive" href="le-domaine.html">Découvrir le domaine</a>
-        <a class="lien-fleche" href="hebergements.html">Voir les hébergements<svg aria-hidden="true"><use href="#i-fleche"/></svg></a>
+        <a class="btn btn--sapin" href="le-domaine.html">Découvrir le domaine</a>
+        <a class="lien-fleche" href="#acces">Venir au domaine<svg aria-hidden="true"><use href="#i-fleche"/></svg></a>
       </div>
     </div>
-    <div class="presentation__photos apparait">
-      <img src="assets/img/vue-vercors-1600.jpg" srcset="assets/img/vue-vercors-800.jpg 800w, assets/img/vue-vercors-1600.jpg 1600w" sizes="(max-width: 900px) 60vw, 360px" width="1600" height="1200" alt="Le domaine vu de ses vignes : les pins parasols, les toits des gîtes et le Vercors à l&#x27;horizon" loading="lazy" decoding="async">
-      <img src="assets/img/truffier-terrasse-1600.jpg" srcset="assets/img/truffier-terrasse-800.jpg 800w, assets/img/truffier-terrasse-1600.jpg 1600w" sizes="(max-width: 900px) 40vw, 220px" width="1600" height="1200" alt="La terrasse en bois du Truffier, sa table et la vue sur les collines et le Vercors" loading="lazy" decoding="async">
-      <p class="presentation__cachet"><strong>2003</strong>la création du domaine, qui s'agrandit et s'améliore chaque année</p>
+    <div class="presentation__visuel apparait">
+      <img src="assets/img/vue-ciel-1600.jpg" srcset="assets/img/vue-ciel-800.jpg 800w, assets/img/vue-ciel-1600.jpg 1600w, assets/img/vue-ciel-2400.jpg 1920w" sizes="(max-width: 900px) 90vw, 620px" width="1920" height="1080" alt="Le domaine vu du ciel : les gîtes et les chalets au milieu des vignes, en lisière de forêt" class="presentation__grande" loading="lazy" decoding="async">
+      <img src="assets/img/truffier-terrasse-1600.jpg" srcset="assets/img/truffier-terrasse-800.jpg 800w, assets/img/truffier-terrasse-1600.jpg 1600w" sizes="(max-width: 900px) 40vw, 260px" width="1600" height="1200" alt="La terrasse en bois du Truffier, sa table et la vue sur les collines et le Vercors" class="presentation__petite" loading="lazy" decoding="async">
+      <span class="presentation__etiquette"><svg aria-hidden="true"><use href="#i-repere"/></svg>Châtillon-Saint-Jean</span>
+      <p class="presentation__cachet"><span><strong>2003</strong>un domaine qui grandit chaque année</span></p>
     </div>
   </div>
 </section>
 
-<div class="bois" aria-hidden="true"></div>
-
-<section class="section section--lin" id="hebergements">
-  <div class="contenant">
-    <header class="entete-section entete-section--ligne apparait">
-      <div>
-        <p class="surtitre">Nos hébergements</p>
-        <h2>Des hébergements pour <em>60 à 120 personnes</em></h2>
-      </div>
-      <a class="lien-fleche" href="hebergements.html">Tous les hébergements<svg aria-hidden="true"><use href="#i-fleche"/></svg></a>
-    </header>
-    <div class="cartes-heb">
-      <a class="carte-heb apparait" href="hebergements.html#gites">
-        <div class="carte-heb__photo"><img src="assets/img/cerisier-1600.jpg" srcset="assets/img/cerisier-800.jpg 800w, assets/img/cerisier-1600.jpg 1600w" sizes="(max-width: 620px) 100vw, (max-width: 980px) 50vw, 600px" width="1600" height="1067" alt="Le Cerisier, grand gîte aux murs ocre et aux tuiles rondes, dans la cour du domaine" loading="lazy" decoding="async"><span class="carte-heb__capacite"><svg aria-hidden="true"><use href="#i-groupe"/></svg>Environ 30 personnes</span></div>
-        <div class="carte-heb__corps">
-          <p class="carte-heb__type">Les gîtes en pierre</p>
-          <h3>Le Cerisier, le Marronnier et la salle Marsanne</h3>
-          <p>Deux grands gîtes nés d'un ancien séchoir à tabac, aux pierres et charpentes apparentes, reliés par une salle de 75 m².</p>
-          <span class="lien-fleche">Découvrir les gîtes<svg aria-hidden="true"><use href="#i-fleche"/></svg></span>
-        </div>
-      </a>
-      <a class="carte-heb apparait" href="hebergements.html#chalets">
-        <div class="carte-heb__photo"><img src="assets/img/truffier-1600.jpg" srcset="assets/img/truffier-800.jpg 800w, assets/img/truffier-1600.jpg 1600w" sizes="(max-width: 620px) 100vw, (max-width: 980px) 50vw, 600px" width="1600" height="1200" alt="Le chalet Truffier en bois, sa grande terrasse couverte et sa barrière, au soleil d&#x27;hiver" loading="lazy" decoding="async"><span class="carte-heb__capacite"><svg aria-hidden="true"><use href="#i-groupe"/></svg>Jusqu'à 30 personnes chacun</span></div>
-        <div class="carte-heb__corps">
-          <p class="carte-heb__type">Les chalets en bois</p>
-          <h3>Le Douglas et le Truffier</h3>
-          <p>Deux chalets en ossature bois, terrasses sur pilotis, vue sur le Vercors. Chacun s'agrandit d'une extension de trois chambres.</p>
-          <span class="lien-fleche">Découvrir les chalets<svg aria-hidden="true"><use href="#i-fleche"/></svg></span>
-        </div>
-      </a>
-      <a class="carte-heb apparait" href="hebergements.html#tilleul-acacia">
-        <div class="carte-heb__photo"><img src="assets/img/tilleul-1600.jpg" srcset="assets/img/tilleul-800.jpg 800w, assets/img/tilleul-1600.jpg 1600w" sizes="(max-width: 620px) 100vw, (max-width: 980px) 50vw, 400px" width="1600" height="1200" alt="Tilleul et Acacia : deux logements en bois autour d&#x27;une cour avec une table de pique-nique" loading="lazy" decoding="async"><span class="carte-heb__capacite"><svg aria-hidden="true"><use href="#i-groupe"/></svg>Jusqu'à 14 personnes</span></div>
-        <div class="carte-heb__corps">
-          <p class="carte-heb__type">Deux logements voisins</p>
-          <h3>Tilleul et Acacia</h3>
-          <p>Deux hébergements complémentaires autour d'une même cour, pour les groupes jusqu'à 14 personnes.</p>
-          <span class="lien-fleche">Découvrir Tilleul et Acacia<svg aria-hidden="true"><use href="#i-fleche"/></svg></span>
-        </div>
-      </a>
-      <a class="carte-heb apparait" href="hebergements.html#insolites">
-        <div class="carte-heb__photo"><img src="assets/img/roulotte-1600.jpg" srcset="assets/img/roulotte-800.jpg 800w, assets/img/roulotte-1600.jpg 1600w" sizes="(max-width: 620px) 100vw, (max-width: 980px) 50vw, 400px" width="1600" height="1066" alt="La roulotte en bois du domaine, sa porte jaune et sa petite terrasse, sous les arbres" loading="lazy" decoding="async"><span class="carte-heb__capacite"><svg aria-hidden="true"><use href="#i-lit"/></svg>De 2 à 14 lits</span></div>
-        <div class="carte-heb__corps">
-          <p class="carte-heb__type">Les insolites</p>
-          <h3>Roulottes, cabanes et atelier</h3>
-          <p>La roulotte cosy, la roulotte dortoir de 14 lits, la cabane, la cabane bambou et l'atelier : pour loger autrement une partie du groupe.</p>
-          <span class="lien-fleche">Découvrir les insolites<svg aria-hidden="true"><use href="#i-fleche"/></svg></span>
-        </div>
-      </a>
-      <a class="carte-heb apparait" href="hebergements.html#bivouacs">
-        <div class="carte-heb__photo"><img src="assets/img/bivouac-1600.jpg" srcset="assets/img/bivouac-800.jpg 800w, assets/img/bivouac-1600.jpg 1600w" sizes="(max-width: 620px) 100vw, (max-width: 980px) 100vw, 400px" width="1600" height="1067" alt="Les grandes tentes du bivouac sur leur plateforme en bois, au milieu des pins" loading="lazy" decoding="async"><span class="carte-heb__capacite"><svg aria-hidden="true"><use href="#i-groupe"/></svg>Jusqu'à 36 personnes</span></div>
-        <div class="carte-heb__corps">
-          <p class="carte-heb__type">Les bivouacs perchés</p>
-          <h3>Le Bivouac du Haut et le Bivouac du Bas</h3>
-          <p>Deux plateformes de 130 m² sur pilotis, à 5 m de haut en pleine forêt, avec de grandes tentes et la vue sur le Vercors.</p>
-          <span class="lien-fleche">Découvrir les bivouacs<svg aria-hidden="true"><use href="#i-fleche"/></svg></span>
-        </div>
-      </a>
-    </div>
-    <div class="cartes-heb__note apparait">
-      <p>Plusieurs hébergements peuvent accueillir un même groupe : dites-nous combien vous êtes, nous vous proposons la bonne combinaison.</p>
-      <a class="btn btn--contour btn--compact" href="contact.html">Nous indiquer votre groupe</a>
-    </div>
+<div class="defile" aria-hidden="true">
+  <div class="defile__piste">
+    <p class="defile__groupe"><span>Gîtes en pierre</span><svg><use href="#i-feuille"/></svg><span class="contour">Chalets en bois</span><svg><use href="#i-feuille"/></svg><span>Roulottes</span><svg><use href="#i-feuille"/></svg><span class="contour">Bivouacs perchés</span><svg><use href="#i-feuille"/></svg><span>Piscine couverte</span><svg><use href="#i-feuille"/></svg><span class="contour">Paintball</span><svg><use href="#i-feuille"/></svg></p>
+    <p class="defile__groupe"><span>Gîtes en pierre</span><svg><use href="#i-feuille"/></svg><span class="contour">Chalets en bois</span><svg><use href="#i-feuille"/></svg><span>Roulottes</span><svg><use href="#i-feuille"/></svg><span class="contour">Bivouacs perchés</span><svg><use href="#i-feuille"/></svg><span>Piscine couverte</span><svg><use href="#i-feuille"/></svg><span class="contour">Paintball</span><svg><use href="#i-feuille"/></svg></p>
   </div>
-</section>
+</div>
 
-<section class="section section--olive sur-sombre" id="ecoresponsable">
+<section class="section section--vert" id="ecoresponsable">
   <div class="contenant eco">
     <div class="eco__texte apparait">
       <p class="surtitre">Un domaine écoresponsable</p>
@@ -294,65 +336,13 @@
         <p class="eco__chiffre"><strong>7 cépages</strong><span>sur plus de 6 000 m² de vigne, et 5 000 m² de truffière</span></p>
       </div>
       <div class="actions">
-        <a class="btn btn--primaire" href="le-domaine.html#engagements">Nos cinq engagements</a>
+        <a class="btn btn--sapin" href="le-domaine.html#engagements">Nos cinq engagements</a>
       </div>
     </div>
     <figure class="eco__photo apparait">
-      <img src="assets/img/solaire-1600.jpg" srcset="assets/img/solaire-800.jpg 800w, assets/img/solaire-1600.jpg 1240w" sizes="(max-width: 900px) 100vw, 560px" width="1240" height="930" alt="Les panneaux solaires sur le toit d&#x27;un gîte, la vigne au premier plan et le Vercors à l&#x27;horizon" loading="lazy" decoding="async">
-      <figcaption class="eco__legende"><svg aria-hidden="true"><use href="#i-soleil"/></svg>Les panneaux solaires du domaine, la vigne et le Vercors au loin.</figcaption>
+      <img src="assets/img/eco-solaire-1600.jpg" srcset="assets/img/eco-solaire-800.jpg 800w, assets/img/eco-solaire-1600.jpg 1600w" sizes="(max-width: 900px) 100vw, 580px" width="1600" height="900" alt="Vu du ciel, un bâtiment du domaine en bois et tuiles, son toit couvert de panneaux solaires, au bord de la vigne" loading="lazy" decoding="async">
+      <figcaption class="eco__legende"><svg aria-hidden="true"><use href="#i-soleil"/></svg>Les panneaux solaires sur les toits du domaine, au bord de la vigne.</figcaption>
     </figure>
-  </div>
-</section>
-
-<section class="section" id="detente">
-  <div class="contenant duo">
-    <div class="duo__photos apparait">
-      <button type="button" class="vignette" data-grand="assets/img/piscine-1600.jpg" data-serie="piscine" data-legende="La piscine intérieure, baignée de lumière" data-alt="La piscine intérieure, baignée de lumière"><img src="assets/img/piscine-1600.jpg" srcset="assets/img/piscine-800.jpg 800w, assets/img/piscine-1600.jpg 1600w" sizes="(max-width: 900px) 70vw, 460px" width="1600" height="1067" alt="La piscine intérieure, baignée de lumière" loading="lazy" decoding="async"></button>
-          <button type="button" class="vignette" data-grand="assets/img/piscine-jacuzzi-1600.jpg" data-serie="piscine" data-legende="Le jacuzzi à débordement, attenant au bassin" data-alt="Le jacuzzi à débordement, attenant au bassin"><img src="assets/img/piscine-jacuzzi-1600.jpg" srcset="assets/img/piscine-jacuzzi-800.jpg 800w, assets/img/piscine-jacuzzi-1600.jpg 1600w" sizes="(max-width: 900px) 70vw, 460px" width="1600" height="1067" alt="Le jacuzzi à débordement, attenant au bassin" loading="lazy" decoding="async"></button>
-          <button type="button" class="vignette" data-grand="assets/img/piscine-vue-1600.jpg" data-serie="piscine" data-legende="Le bassin de 9,20 m sur 4,50 m" data-alt="Le bassin de 9,20 m sur 4,50 m"><img src="assets/img/piscine-vue-1600.jpg" srcset="assets/img/piscine-vue-800.jpg 800w, assets/img/piscine-vue-1600.jpg 1600w" sizes="(max-width: 900px) 70vw, 460px" width="1600" height="1067" alt="Le bassin de 9,20 m sur 4,50 m" loading="lazy" decoding="async"></button>
-    </div>
-    <div class="duo__texte apparait">
-      <p class="surtitre">L'espace détente</p>
-      <h2>Piscine couverte et jacuzzi, <em>toute l'année</em></h2>
-      <p>Dans un bâtiment indépendant au cœur du domaine, la piscine intérieure rassemble tout le groupe, quel que soit le temps. Elle est chauffée toute l'année, avec un jacuzzi attenant.</p>
-      <ul class="liste-coches">
-        <li><svg aria-hidden="true"><use href="#i-coche"/></svg><span>Bassin de 9,20 m sur 4,50 m, chauffé toute l'année</span></li>
-        <li><svg aria-hidden="true"><use href="#i-coche"/></svg><span>Jacuzzi attenant, à débordement</span></li>
-        <li><svg aria-hidden="true"><use href="#i-coche"/></svg><span>Accès 24 h sur 24 pendant le séjour, en option</span></li>
-        <li><svg aria-hidden="true"><use href="#i-coche"/></svg><span>Commun aux gîtes, privatisable pour votre groupe</span></li>
-      </ul>
-      <div class="actions"><a class="lien-fleche" href="le-domaine.html#detente">L'espace détente en détail<svg aria-hidden="true"><use href="#i-fleche"/></svg></a></div>
-    </div>
-  </div>
-</section>
-
-<section class="section section--lin" id="evenements">
-  <div class="contenant">
-    <header class="entete-section entete-section--ligne apparait">
-      <div>
-        <p class="surtitre">Vos événements</p>
-        <h2>Mariage, cousinade, EVG, séminaire : <em>nous organisons</em></h2>
-      </div>
-      <a class="lien-fleche" href="evenements.html">Organiser votre événement<svg aria-hidden="true"><use href="#i-fleche"/></svg></a>
-    </header>
-    <div class="tuiles">
-      <a class="tuile apparait" href="evenements.html?type=mariage#demande"><img src="assets/img/altesse-mariage-1600.jpg" srcset="assets/img/altesse-mariage-800.jpg 800w, assets/img/altesse-mariage-1600.jpg 1000w" sizes="(max-width: 560px) 100vw, (max-width: 980px) 50vw, 300px" width="1000" height="665" alt="La salle Altesse dressée pour un mariage, nappes sombres et housses de chaises blanches" loading="lazy" decoding="async"><div class="tuile__corps"><h3>Mariages</h3><p>Salle, hébergement des invités, tente de réception, DJ et traiteur.</p></div></a>
-      <a class="tuile apparait" href="evenements.html?type=famille#demande"><img src="assets/img/altesse-bleu-1600.jpg" srcset="assets/img/altesse-bleu-800.jpg 800w, assets/img/altesse-bleu-1600.jpg 1600w" sizes="(max-width: 560px) 100vw, (max-width: 980px) 50vw, 300px" width="1600" height="901" alt="La salle décorée de bleu et de blanc pour une fête, longues tables dressées" loading="lazy" decoding="async"><div class="tuile__corps"><h3>Fêtes de famille</h3><p>Cousinades et anniversaires : tout le monde dort sur place.</p></div></a>
-      <a class="tuile apparait" href="evenements.html#formules"><img src="assets/img/act-sumo-800.jpg" srcset="assets/img/act-sumo-800.jpg 600w" sizes="(max-width: 560px) 100vw, (max-width: 980px) 50vw, 300px" width="600" height="400" alt="Deux participants en costumes de sumo s&#x27;affrontent sur un tapis, devant un chalet du domaine" loading="lazy" decoding="async"><div class="tuile__corps"><h3>EVG et EVJF</h3><p>Trois formules tout compris, de 169 à 299 € par personne.</p></div></a>
-      <a class="tuile apparait" href="evenements.html?type=entreprise#demande"><img src="assets/img/altesse-u-1600.jpg" srcset="assets/img/altesse-u-800.jpg 800w, assets/img/altesse-u-1600.jpg 1600w" sizes="(max-width: 560px) 100vw, (max-width: 980px) 50vw, 300px" width="1600" height="1200" alt="La salle Altesse dressée en U pour un repas ou une réunion de groupe" loading="lazy" decoding="async"><div class="tuile__corps"><h3>Séminaires</h3><p>Salle modulable, hébergement et team building sur place.</p></div></a>
-    </div>
-    <div class="salle__chiffres apparait" style="margin-top:1.4rem;align-items:center">
-      <strong style="margin-right:.4rem">Trois salles de réception :</strong>
-      <span class="pastille"><svg aria-hidden="true"><use href="#i-surface"/></svg>Marsanne, 75 m²</span>
-      <span class="pastille"><svg aria-hidden="true"><use href="#i-surface"/></svg>Roussanne, 100 m², 80 à table</span>
-      <span class="pastille"><svg aria-hidden="true"><use href="#i-surface"/></svg>Altesse, 135 m², jusqu'à 150 personnes</span>
-      <a class="lien-fleche" href="evenements.html#salles" style="margin-left:.4rem">Voir les salles<svg aria-hidden="true"><use href="#i-fleche"/></svg></a>
-    </div>
-    <div class="prochain" id="prochain" hidden>
-      <span class="prochain__etiquette">Prochain rendez-vous</span>
-      <div><p class="prochain__titre"></p><p class="prochain__date"></p></div>
-      <a class="btn btn--olive btn--compact" href="evenements.html#agenda-section">L'agenda du domaine</a>
-    </div>
   </div>
 </section>
 
@@ -361,7 +351,7 @@
     <div class="duo__photos apparait">
       <button type="button" class="vignette" data-grand="assets/img/act-joutes-800.jpg" data-serie="activites" data-legende="Les joutes sur structure gonflable" data-alt="Les joutes sur structure gonflable"><img src="assets/img/act-joutes-800.jpg" srcset="assets/img/act-joutes-800.jpg 600w" sizes="(max-width: 900px) 70vw, 460px" width="600" height="399" alt="Les joutes sur structure gonflable" loading="lazy" decoding="async"></button>
           <button type="button" class="vignette" data-grand="assets/img/act-sumo-800.jpg" data-serie="activites" data-legende="Les combats de sumo" data-alt="Les combats de sumo"><img src="assets/img/act-sumo-800.jpg" srcset="assets/img/act-sumo-800.jpg 600w" sizes="(max-width: 900px) 70vw, 460px" width="600" height="400" alt="Les combats de sumo" loading="lazy" decoding="async"></button>
-          <button type="button" class="vignette" data-grand="assets/img/bivouac-pilotis-1600.jpg" data-serie="activites" data-legende="Le bivouac sur pilotis, au cœur du terrain de paintball" data-alt="Le bivouac sur pilotis, au cœur du terrain de paintball"><img src="assets/img/bivouac-pilotis-1600.jpg" srcset="assets/img/bivouac-pilotis-800.jpg 800w, assets/img/bivouac-pilotis-1600.jpg 1600w" sizes="(max-width: 900px) 70vw, 460px" width="1600" height="1067" alt="Le bivouac sur pilotis, au cœur du terrain de paintball" loading="lazy" decoding="async"></button>
+          <button type="button" class="vignette" data-grand="assets/img/bivouac-tentes-1600.jpg" data-serie="activites" data-legende="Les tentes du bivouac, au-dessus du terrain de paintball" data-alt="Les tentes du bivouac, au-dessus du terrain de paintball"><img src="assets/img/bivouac-tentes-1600.jpg" srcset="assets/img/bivouac-tentes-800.jpg 800w, assets/img/bivouac-tentes-1600.jpg 1600w" sizes="(max-width: 900px) 70vw, 460px" width="1600" height="1067" alt="Les tentes du bivouac, au-dessus du terrain de paintball" loading="lazy" decoding="async"></button>
     </div>
     <div class="duo__texte apparait">
       <p class="surtitre">Sur place</p>
@@ -385,37 +375,49 @@
   </div>
 </section>
 
-<section class="section section--olive sur-sombre" id="video">
+<section class="section section--lin" id="evenements">
   <div class="contenant">
-    <header class="entete-section entete-section--centre apparait">
-      <p class="surtitre">En vidéo</p>
-      <h2>Le domaine <em>vu du ciel</em></h2>
-    </header>
-    <div class="video apparait">
-      <div class="video__cadre">
-        <img src="assets/img/video-1600.jpg" srcset="assets/img/video-800.jpg 800w, assets/img/video-1600.jpg 1280w" sizes="(max-width: 1100px) 100vw, 1040px" width="1280" height="720" alt="Le Domaine de Châtillon vu du ciel, les toits des gîtes au milieu des arbres et le Vercors au loin" loading="lazy" decoding="async">
-        <button type="button" class="video__lancer" data-video="h5gR-hXIhOQ" data-titre="Domaine de Châtillon, la vidéo">
-          <span class="video__bouton"><svg aria-hidden="true"><use href="#i-lecture"/></svg>Voir la vidéo du domaine</span>
-        </button>
+    <header class="entete-section entete-section--ligne apparait">
+      <div>
+        <p class="surtitre">Vos événements</p>
+        <h2>Mariage, cousinade, EVG, séminaire : <em>nous organisons</em></h2>
       </div>
-      <p class="video__note">Vidéo du domaine (YouTube). Elle ne se charge que si vous cliquez.</p>
+      <a class="lien-fleche" href="evenements.html">Organiser votre événement<svg aria-hidden="true"><use href="#i-fleche"/></svg></a>
+    </header>
+    <div class="tuiles">
+      <a class="tuile apparait" href="evenements.html?type=mariage#demande"><img src="assets/img/altesse-mariage-1600.jpg" srcset="assets/img/altesse-mariage-800.jpg 800w, assets/img/altesse-mariage-1600.jpg 1000w" sizes="(max-width: 560px) 100vw, (max-width: 980px) 50vw, 300px" width="1000" height="665" alt="La salle Altesse dressée pour un mariage, nappes sombres et housses de chaises blanches" loading="lazy" decoding="async"><div class="tuile__corps"><h3>Mariages</h3><p>Salle, hébergement des invités, tente de réception, DJ et traiteur.</p></div></a>
+      <a class="tuile apparait" href="evenements.html?type=famille#demande"><img src="assets/img/altesse-bleu-1600.jpg" srcset="assets/img/altesse-bleu-800.jpg 800w, assets/img/altesse-bleu-1600.jpg 1600w" sizes="(max-width: 560px) 100vw, (max-width: 980px) 50vw, 300px" width="1600" height="901" alt="La salle décorée de bleu et de blanc pour une fête, longues tables dressées" loading="lazy" decoding="async"><div class="tuile__corps"><h3>Fêtes de famille</h3><p>Cousinades et anniversaires : tout le monde dort sur place.</p></div></a>
+      <a class="tuile apparait" href="evenements.html#formules"><img src="assets/img/act-sumo-800.jpg" srcset="assets/img/act-sumo-800.jpg 600w" sizes="(max-width: 560px) 100vw, (max-width: 980px) 50vw, 300px" width="600" height="400" alt="Deux participants en costumes de sumo s&#x27;affrontent sur un tapis, devant un chalet du domaine" loading="lazy" decoding="async"><div class="tuile__corps"><h3>EVG et EVJF</h3><p>Trois formules tout compris, de 169 à 299 € par personne.</p></div></a>
+      <a class="tuile apparait" href="evenements.html?type=entreprise#demande"><img src="assets/img/altesse-u-1600.jpg" srcset="assets/img/altesse-u-800.jpg 800w, assets/img/altesse-u-1600.jpg 1600w" sizes="(max-width: 560px) 100vw, (max-width: 980px) 50vw, 300px" width="1600" height="1200" alt="La salle Altesse dressée en U pour un repas ou une réunion de groupe" loading="lazy" decoding="async"><div class="tuile__corps"><h3>Séminaires</h3><p>Salle modulable, hébergement et team building sur place.</p></div></a>
+    </div>
+    <div class="salles-ligne apparait">
+      <strong>Trois salles de réception :</strong>
+      <span class="pastille"><svg aria-hidden="true"><use href="#i-surface"/></svg>Marsanne, 75 m²</span>
+      <span class="pastille"><svg aria-hidden="true"><use href="#i-surface"/></svg>Roussanne, 100 m², 80 à table</span>
+      <span class="pastille"><svg aria-hidden="true"><use href="#i-surface"/></svg>Altesse, 135 m², jusqu'à 150 personnes</span>
+      <a class="lien-fleche" href="evenements.html#salles">Voir les salles<svg aria-hidden="true"><use href="#i-fleche"/></svg></a>
+    </div>
+    <div class="prochain" id="prochain" hidden>
+      <span class="prochain__etiquette">Prochain rendez-vous</span>
+      <div><p class="prochain__titre"></p><p class="prochain__date"></p></div>
+      <a class="btn btn--sapin btn--compact" href="evenements.html#agenda-section">L'agenda du domaine</a>
     </div>
   </div>
 </section>
 
-<section class="section section--lin" id="avis">
+<section class="section" id="avis">
   <div class="contenant">
     <header class="entete-section apparait">
       <p class="surtitre">Ils sont venus en groupe</p>
       <h2>Ce que nos hôtes <em>disent du domaine</em></h2>
     </header>
     <div class="avis">
-      <aside class="avis__note sur-sombre apparait">
+      <aside class="avis__note apparait">
         <p class="avis__chiffre">4,1<small>/5</small></p>
         <span class="etoiles" aria-hidden="true"><svg><use href="#i-etoile"/></svg><svg><use href="#i-etoile"/></svg><svg><use href="#i-etoile"/></svg><svg><use href="#i-etoile"/></svg><svg style="opacity:.35"><use href="#i-etoile"/></svg></span>
         <p class="avis__total"><strong>186 avis Google</strong>, dont 112 avis à 5 étoiles</p>
         <p class="avis__total">Tripadvisor : <strong>5/5</strong></p>
-        <a class="btn btn--primaire btn--pleine" href="https://www.google.com/maps/place/Domaine+de+Chatillon/@45.0965777,5.1317655,435m/data=!4m8!3m7!1s0x478ab3713b94694d:0x54501f4416697aa2!8m2!3d45.0967279!4d5.1328663!9m1!1b1" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-google"/></svg>Lire les avis sur Google</a>
+        <a class="btn btn--sapin btn--pleine" href="https://www.google.com/maps/place/Domaine+de+Chatillon/@45.0965777,5.1317655,435m/data=!4m8!3m7!1s0x478ab3713b94694d:0x54501f4416697aa2!8m2!3d45.0967279!4d5.1328663!9m1!1b1" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-google"/></svg>Lire les avis sur Google</a>
       </aside>
       <div class="avis__liste">
         <figure class="avis-carte apparait">
@@ -458,7 +460,7 @@ Je recommande</blockquote>
   </div>
 </section>
 
-<section class="section" id="alentours">
+<section class="section section--lin" id="alentours">
   <div class="contenant">
     <header class="entete-section apparait">
       <p class="surtitre">Autour du domaine</p>
@@ -475,7 +477,7 @@ Je recommande</blockquote>
   </div>
 </section>
 
-<section class="section section--lin" id="acces">
+<section class="section" id="acces">
   <div class="contenant acces">
     <div class="apparait">
       <p class="surtitre">Venir au domaine</p>
@@ -496,14 +498,15 @@ Je recommande</blockquote>
 </section>
 
 <section class="appel" data-sans-barre>
-  <div class="appel__photo"><img src="assets/img/douglas-cote-1600.jpg" srcset="assets/img/douglas-cote-800.jpg 800w, assets/img/douglas-cote-1600.jpg 1600w" sizes="100vw" width="1600" height="1200" alt="" loading="lazy" decoding="async"></div>
+  <div class="appel__photo"><img src="assets/img/terrasse-vue-1600.jpg" srcset="assets/img/terrasse-vue-800.jpg 800w, assets/img/terrasse-vue-1600.jpg 1600w, assets/img/terrasse-vue-2400.jpg 1920w" sizes="100vw" width="1920" height="1080" alt="" loading="lazy" decoding="async"></div>
   <div class="contenant appel__grille">
     <div class="apparait">
-      <p class="surtitre" style="color:var(--c-vert)">Votre séjour</p>
+      <p class="surtitre">Votre séjour</p>
       <h2>Parlons de votre <em>séjour de groupe</em></h2>
       <p>Indiquez-nous vos dates, votre nombre et votre projet : nous vous répondons avec les hébergements disponibles et confirmons votre séjour.</p>
     </div>
     <div class="appel__tel apparait">
+      <small>Appelez-nous</small>
       <a class="appel__numero" href="tel:+33680141850"><svg aria-hidden="true"><use href="#i-tel"/></svg>06 80 14 18 50</a>
       <a class="btn btn--primaire" href="contact.html">Faire une demande en ligne</a>
     </div>
@@ -512,11 +515,17 @@ Je recommande</blockquote>
 
 </main>
 
+<dialog class="film" id="film" aria-label="Le film du domaine">
+  <button type="button" class="film__fermer" aria-label="Fermer la vidéo"><svg aria-hidden="true"><use href="#i-croix"/></svg></button>
+  <div class="film__cadre"></div>
+  <p class="film__note">Vidéo du domaine sur YouTube, chargée seulement quand vous la lancez.</p>
+</dialog>
+
 <footer class="pied">
   <div class="contenant pied__grille">
     <div>
       <a class="logo" href="index.html" aria-label="Domaine de Châtillon, page d'accueil">
-        <img class="logo__img" src="assets/logo/embleme.png" width="442" height="397" alt="">
+        <img class="logo__img" src="assets/logo/embleme-clair.png" width="442" height="397" alt="">
         <span class="logo__mots"><span class="logo__petit">Domaine de</span><span class="logo__grand">Châtillon</span></span>
       </a>
       <p>Gîtes, chalets, roulottes, cabanes et bivouacs pour les groupes, dans la Drôme des Collines, entre Vercors et Ardèche.</p>
@@ -565,7 +574,7 @@ Je recommande</blockquote>
 
 <div class="barre-appel" id="barre-appel">
   <a class="btn btn--primaire" href="tel:+33680141850"><svg aria-hidden="true"><use href="#i-tel"/></svg>06 80 14 18 50</a>
-  <a class="btn btn--fantome" href="contact.html">Faire une demande</a>
+  <a class="btn btn--sapin" href="contact.html">Faire une demande</a>
 </div>
 
 <dialog class="visionneuse" id="visionneuse" aria-label="Photo en grand">
